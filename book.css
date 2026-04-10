@@ -3,8 +3,6 @@ body {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
 }
-
-/* Header */
 header {
   position: fixed;
   top: 0;
@@ -42,16 +40,13 @@ header {
   color: gray;
 }
 
-/* Banner ngay dưới header */
 .banner {
-  margin-top: 80px; /* tránh header che mất */
+  margin-top: 80px;
   background-color: #ddd;
   text-align: center;
   padding: 40px;
   font-size: 24px;
 }
-
-/* Main */
 main {
   min-height: 100vh;
   background-color: #f1f1f1;
@@ -65,8 +60,6 @@ main {
   font-size: 28px;
   border-bottom: 1px solid #ccc;
 }
-
-/* Footer */
 footer {
   background-color: #333;
   color: white;
