@@ -10,7 +10,7 @@ header {
   height: 80px;
   padding: 0 40px;
   z-index: 1000;
-  background-color: white;
+  background-color: #0d74b1;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -30,18 +30,18 @@ header {
 .right a {
   margin-left: 20px;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
   padding-right: 55px;
 }
 
 .right a:hover {
-  color: gray;
+  color: #101732;
 }
 
 .banner {
   margin-top: 80px;
-  background-color: #ddd;
+  background-color: #0099cf;
   text-align: center;
   padding: 40px;
   font-size: 24px;
@@ -60,7 +60,7 @@ main {
   border-bottom: 1px solid #ccc;
 }
 footer {
-  background-color: #333;
+  background-color: #101732;
   color: white;
   text-align: center;
   padding: 20px;
