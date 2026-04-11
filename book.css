@@ -65,15 +65,17 @@ footer {
 .slideshow {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 500px; /* chỉnh chiều cao banner */
   overflow: hidden;
 }
 
 .slideshow img {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;       /* vừa khung */
+  height: 100%;      /* vừa khung */
+  object-fit: cover; /* giữ tỷ lệ, không méo */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -81,3 +83,4 @@ footer {
 .slideshow img.active {
   opacity: 1;
 }
+
