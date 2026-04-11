@@ -62,25 +62,42 @@ footer {
   text-align: center;
   padding: 20px;
 }
-.slideshow {
+.banner {
   position: relative;
   width: 100%;
-  height: 500px; /* chỉnh chiều cao banner */
+  height: 700px;
   overflow: hidden;
 }
 
-.slideshow img {
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ảnh phủ kín banner */
+}
+
+.banner-content {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;       /* vừa khung */
-  height: 100%;      /* vừa khung */
-  object-fit: cover; /* giữ tỷ lệ, không méo */
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
 }
 
-.slideshow img.active {
-  opacity: 1;
+.search-box input, .search-box button {
+  padding: 10px;
+  font-size: 20px;
 }
-
+.search-box button {
+  background-color: orange;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+h1{
+  font-size: 60px;
+}
+p{
+  font-size: 20px;
+}
