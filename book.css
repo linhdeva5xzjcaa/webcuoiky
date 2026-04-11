@@ -40,11 +40,8 @@ header {
 }
 
 .banner {
-  margin-top: 80px;
   background-color: #0099cf;
   text-align: center;
-  padding: 40px;
-  font-size: 24px;
 }
 main {
   min-height: 100vh;
@@ -64,4 +61,23 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+}
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+  opacity: 1;
 }
