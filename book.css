@@ -1,103 +1,162 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html
+{
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+body
+{
   font-family: Arial, sans-serif;
 }
-header {
+header
+{
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 80px;
   padding: 0 40px;
-  z-index: 1000;
   background-color: #0d74b1;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
-
-.container {
+.container
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-
-.logo {
+.logo
+{
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-
-.right a {
+.right a
+{
   margin-left: 20px;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
-  padding-right: 55px;
 }
-
-.right a:hover {
+.right a:hover
+{
   color: #101732;
 }
-
-.banner {
-  background-color: #0099cf;
-  text-align: center;
-}
-main {
-  min-height: 100vh;
-  background-color: #f1f1f1;
-}
-
-.body section {
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 28px;
-  border-bottom: 1px solid #ccc;
-}
-footer {
-  background-color: #101732;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-.banner {
+.banner
+{
   position: relative;
-  width: 100%;
-  height: 700px;
-  overflow: hidden;
+  height: 100vh;
 }
-
-.banner-img {
+.banner-img
+{
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* ảnh phủ kín banner */
+  height: 80%;
+  object-fit: cover;
 }
-
-.banner-content {
+.banner-content
+{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #fff;
   text-align: center;
-  z-index: 2;
 }
-
-.search-box input, .search-box button {
-  padding: 10px;
+.banner-content h1
+{
+  font-size: 60px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+.banner-content p
+{
   font-size: 20px;
+  margin: 10px 0 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
-.search-box button {
-  background-color: orange;
+.search-box
+{
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
+.search-box input,
+.search-box button
+{
+  padding: 10px;
+  font-size: 16px;
+}
+.search-box button
+{
+  background: orange;
+  color: #fff;
   border: none;
-  color: white;
   cursor: pointer;
 }
-h1{
-  font-size: 60px;
+.destinations
+{
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
 }
-p{
+.destinations h2
+{
+  font-size: 80px;
+}
+.destinations p
+{
+  font-size: 25px;
+  margin: 10px 0 50px;
+}
+.cards
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card
+{
+  width: 360px;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.card
+{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover
+{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.card img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+.info
+{
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #fff;
+}
+footer
+{
+  background: #101732;
+  color: #fff;
+  padding: 20px;
   font-size: 20px;
 }
