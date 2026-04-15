@@ -98,6 +98,13 @@ header
   border: none;
   cursor: pointer;
 }
+.search-box button:hover
+{
+  background: rgb(144, 94, 1);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 .destinations
 {
   padding: 80px 20px;
