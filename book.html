@@ -4,53 +4,155 @@
   <meta charset="UTF-8">
   <title>Bố cục 4 phần</title>
   <link rel="stylesheet" href="book.css">
-  <script lang="javascript" src="book.js"></script>
+  <script src="book.js" defer></script>
 </head>
+
 <body id="top">
-  <header>
-    <div class="container">
-      <div class="left">
-        <a href=""><img src="VIdeo/home.png" alt="Logo" class="logo"></a>
-      </div>
-      <div class="right">
-        <a href="#tag1">Tag1</a>
-        <a href="#tag2">Tag2</a>
-        <a href="#tag3">Tag3</a>
-        <a href="index.html">Đăng nhập</a>
-      </div>
+
+<header>
+  <div class="container">
+    <div class="left">
+      <a href="#"><img src="VIdeo/home.png" alt="Logo" class="logo"></a>
     </div>
-  </header>
-  <div class="banner">
-  <img src="VIdeo/HL.jpg" class="banner-img">
+    <nav class="right">
+      <a href="#tag1">Khách Sạn</a>
+      <a href="#tag2">Resort</a>
+      <a href="#tag3">Vé vui chơi</a>
+      <a id="login-link" href="index.html">Đăng nhập</a>
+    </nav>
+  </div>
+</header>
+
+<section style="height: 800px;" class="banner">
+  <img src="VIdeo/HL.jpg" class="banner-img" alt="">
+  
   <div class="banner-content">
     <h1>Trải nghiệm kỳ nghỉ tuyệt vời</h1>
-    <p>Combo khách sạn - vé máy bay - đưa đón sân bay giá tốt nhất</p>
+    <p>Khách sạn - HomeStay - Resort</p>
+
     <div class="search-box">
       <input type="text" placeholder="Bạn muốn đi đâu?">
       <input type="date">
       <input type="date">
-      <button>Tìm</button>
+      <button>Tìm kiếm</button>
     </div>
   </div>
-</div>
+</section>
 
+<main>
+  <section style="height: 800px;" id="tag1" class="destinations">
+    <h2>KHÁCH SẠN</h2>
+    <p>Chọn địa điểm nơi bạn muốn đến</p>
 
-  <main>
-    <section class="body">
-      <section id="tag1">Tag1</section>
-      <section id="tag2">Tag2</section>
-      <section id="tag3">Tag3</section>
-    </section>
-  </main>
+    <div class="cards">
+      <div class="card">
+        <a href=""><img src="VIdeo/PhuQuoc.jpg" alt=""></a>
+        <div class="info">
+          <h3>Phú Quốc</h3>
+        </div>
+      </div>
 
-  <footer style="height: 200px;">
-    Footer
-  </footer>
-  <div>testgit</div>
+      <div class="card">
+        <a href=""><img src="VIdeo/DaLat.jpg" alt=""></a>
+        <div class="info">
+          <h3>Đà Lạt</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="VIdeo/QuyNhon.jpg" alt=""></a>
+        <div class="info">
+          <h3>Quy Nhơn</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="VIdeo/VungTau.jfif" alt=""></a>
+        <div class="info">
+          <h3>Vũng Tàu</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+<hr>
+  <section style="height: 800px;" id="tag2" class="destinations">
+    <h2>RESORT</h2>
+    <p>Chọn địa điểm nơi bạn muốn đến</p>
+
+    <div class="cards">
+      <div class="card">
+        <a href=""><img src="VIdeo/NhaTrang.webp" alt=""></a>
+        <div class="info">
+          <h3>Nha Trang</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="VIdeo/DaNang.webp" alt=""></a>
+        <div class="info">
+          <h3>Đà Nẵng</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="VIdeo/PhuQuoc.jpg" alt=""></a>
+        <div class="info">
+          <h3>Phú Quốc</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="VIdeo/VungTau.jfif" alt=""></a>
+        <div class="info">
+          <h3>Vũng Tàu</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+<hr>
+  <section style="height: 800px;" id="tag3" class="destinations">
+    <h2>Vé vui chơi</h2>
+    <p>Chơi thả ga cười haha</p>
+
+    <div class="cards">
+      <div class="card">
+        <a href=""><img src="VIdeo/PhuQuoc.jpg" alt=""></a>
+        <div class="info">
+          <h3>Phú Quốc</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="VIdeo/DaNang.webp" alt=""></a>
+        <div class="info">
+          <h3>Đà Nẵng</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="VIdeo/HaLong.jpg" alt=""></a>
+        <div class="info">
+          <h3>Quảng Ninh</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="VIdeo/TayNinh.jpg" alt=""></a>
+        <div class="info">
+          <h3>Tây Ninh</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="height: 200px;">
+  <div class="container-footer">
+    <p style="font-size: 28px;"><b>Thông tin liên hệ</b></p><br>
+    <p>Số điện thoại:0123456789</p><br>
+    <p>Email:abcxyz@gmail.com</p>
+  </div>
+</footer>
+
 </body>
-<style>
-  html{
-    scroll-behavior: smooth;
-  }
-</style>
 </html>
