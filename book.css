@@ -160,6 +160,11 @@ header
   left: 15px;
   color: #fff;
 }
+a
+{
+  text-decoration: none !important;
+  color: black;
+}
 footer
 {
   background: #101732;
