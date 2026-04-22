@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +14,14 @@ body {
   background: #f5f5f5;
 }
 
-/* ===== HEADER ===== */
-header {
+header
+{
   position: fixed;
   top: 0;
   width: 100%;
   height: 80px;
-  background: #0d74b1;
+  padding: 0 40px;
+  background-color: #0d74b1;
   z-index: 1000;
 }
 
@@ -49,8 +50,6 @@ header {
 .right a:hover {
   color: #101732;
 }
-
-/* ===== SUB HEADER ===== */
 .sub-header {
   position: fixed;
   top: 80px;
@@ -81,57 +80,66 @@ header {
   color: #0d74b1;
 }
 
-/* ===== BANNER ===== */
-.banner {
-  margin-top: 120px;
+.banner
+{
   position: relative;
+  height: 100vh;
 }
-
-.banner-img {
+.banner-img
+{
   width: 100%;
-  height: 400px;
+  height: 80%;
   object-fit: cover;
 }
-
-.banner-content {
+.banner-content
+{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #fff;
   text-align: center;
 }
-
-.banner-content h1 {
-  font-size: 50px;
+.banner-content h1
+{
+  font-size: 60px;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
-
-.banner-content p {
-  margin: 10px 0;
+.banner-content p
+{
+  font-size: 20px;
+  margin: 10px 0 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
-
-.search-box {
-  margin-top: 15px;
+.search-box
+{
   display: flex;
   gap: 10px;
-  justify-content: center;
+  padding: 15px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
 }
-
 .search-box input,
-.search-box button {
+.search-box button
+{
   padding: 10px;
-  border: none;
-  border-radius: 5px;
+  font-size: 16px;
 }
-
-.search-box button {
+.search-box button
+{
   background: orange;
-  color: white;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.search-box button:hover
+{
+  background: rgb(144, 94, 1);
+  color: #fff;
+  border: none;
   cursor: pointer;
 }
 
-/* ===== CARDS ===== */
 .cards {
   max-width: 1200px;
   margin: 40px auto;
@@ -140,8 +148,6 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
-/* CARD */
 .card {
   background: white;
   border-radius: 10px;
@@ -154,10 +160,9 @@ header {
   transform: translateY(-5px);
 }
 
-/* IMAGE */
 .card img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* 🔥 hình vuông */
+  aspect-ratio: 1 / 1;  
   object-fit: cover;
   transition: 0.4s;
 }
@@ -165,8 +170,6 @@ header {
 .card:hover img {
   transform: scale(1.1);
 }
-
-/* TEXT */
 .card h3 {
   margin: 10px;
   font-size: 18px;
@@ -199,7 +202,6 @@ footer {
   gap:100px;
   align-items: centerP;
 }
-/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
