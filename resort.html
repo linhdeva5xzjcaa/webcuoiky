@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <title>Booking Resort</title>
+    <link rel = "stylesheet" href = "resort.css">
+  </head>
+  <body>
+    <header>
+      <div class = "container">
+        <a href = "book.html" class = "logowrap">
+          <img src = "VIdeo/home.png" class = "logo">
+         </a>
+         <nav class = "right">
+          <a href = "book.html">Khách sạn</a>
+          <a href = "resort.html" class = "active">Resort</a>
+          <a href = "khuve.html">Vé vui chơi</a>
+          <a id = "login-link" href = "index.html" class = "btn-login">Đăng nhập</a>
+         </nav>
+      </div>
+    </header>
+    <div class = "sub-header">
+      <div class = "sub-container">
+        <a href = "#5sao" class = "active">5 sao</a>
+        <a href = "#bien">Ven biển</a>
+        <a href = "#nui">Núi Rừng</a>
+        <a href = "#pool">Bể bơi</a>
+      </div>
+    </div>
+    <section class = "banner">
+      <img src ="VIdeo/da-lat-3221709_1280.jpg" class = "banner-img">
+      <div class = "banner-content">
+        <div class = "badge">Resort cao cấp</div>
+        <h1>Nghỉ dưỡng sang trọng <br>Đẳng cấp 5 sao</h1>
+        <p>Tận hưởng kỳ nghỉ đáng nhớ với những resort hàng đầu Việt Nam</p>
+        <div class = "search-box">
+           <input type="text" id="s-dest" placeholder="📍 Tìm resort...">
+          <input type ="date" id = "s-in">
+          <input type = "date" id = "s-out">
+          <button onclick = "doSearch()">Tìm kiếm</button>
+        </div>
+      </div>
+    </section>
+     <div class="list">
+
+  <div class="cards">
+
+  <div class="card">
+    <div class="card-img">
+      <img src="VIdeo/jw.jpg">
+    </div>
+    <div class="card-body">
+      <h3>JW Marriott Phú Quốc</h3>
+      <p>Phú Quốc</p>
+      <p class="price">4.500.000đ</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="VIdeo/Inter.jpg">
+    </div>
+    <div class="card-body">
+      <h3>InterContinental Đà Nẵng</h3>
+      <p>Đà Nẵng</p>
+      <p class="price">3.200.000đ</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="VIdeo/amiana.jpg">
+    </div>
+    <div class="card-body">
+      <h3>Amiana Nha Trang</h3>
+      <p>Nha Trang</p>
+      <p class="price">2.800.000đ</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="VIdeo/flamingo.jpg">
+    </div>
+    <div class="card-body">
+      <h3>Flamingo Đại lải Vĩnh Phúc</h3>
+      <p>Vĩnh Phúc</p>
+      <p class="price">4.500.000đ</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="VIdeo/banyan.jpg">
+    </div>
+    <div class="card-body">
+      <h3>Banyan Tree Lang Co Resort</h3>
+      <p>Huế</p>
+      <p class="price">3.200.000đ</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="VIdeo/thenamhai.jpg">
+    </div>
+    <div class="card-body">
+      <h3>The Nam Hai Hội An</h3>
+      <p>Hội An</p>
+      <p class="price">2.800.000đ</p>
+    </div>
+  </div>
+</div>
+
+</div>
+<footer style="height: 200px;">
+  <div class="container-footer">
+  <div class="container-footer-left">
+    <div class="cot1">
+    <p style="font-size: 20px;"><b>Thông tin liên hệ</b></p><br>
+    <p style="font-size: 15px;">Số điện thoại:0123456789</p><br>
+    <p style="font-size: 15px;">Email:abcxyz@gmail.com</p>
+  </div>
+  <div class="cot2">
+    <p style="font-size: 20px;"><b>Về NAME.com</b></p><br>
+    <p style="font-size: 15px;">Về chúng tôi</p><br>
+    <p style="font-size: 15px;">NAME Blog</p>
+  </div>
+  <div class="cot3">
+    <p style="font-size: 20px;"><b>Thông tin cần biết</b></p><br>
+    <p style="font-size: 15px;">Điều kiện & Điều khoản</p><br>
+    <p style="font-size: 15px;">Câu hỏi thường gặp</p>
+  </div>
+  </div>
+  <div class="container-footer-right">
+  <div class="cot4">
+    <p style="font-size: 15px;">Bạn cần hỗ trợ ? Hãy gọi ngay</p><br>  
+    <p style="font-size: 15px;">&#9742; Hotline: 1900 0000</p><br>
+    <p style="font-size: 15px;">Địa chỉ: 235 Hoàng Quốc Việt</p>
+  </div>
+  <div class="cot5">
+    <img style="width:100px ;height:100px;" src="VIdeo/qr.jpg"><br>
+    <img src="VIdeo/tai-appstore.png"><br>
+    <img src="VIdeo/tai-google-play.png">
+  </div>
+  </div>
+</div>
+</footer>
+    <script src="resort.js"></script>
+  </body>
+</html>
