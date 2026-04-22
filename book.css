@@ -165,10 +165,26 @@ a
   text-decoration: none !important;
   color: black;
 }
-footer
-{
+footer {
   background: #101732;
   color: #fff;
   padding: 20px;
   font-size: 20px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-footer-left {
+  display: flex;
+  gap: 100px;
+}
+
+.container-footer-right{
+  display:flex;
+  gap:100px;
+  align-items: centerP;
 }
