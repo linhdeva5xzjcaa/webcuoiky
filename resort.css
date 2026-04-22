@@ -4,16 +4,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
+html
+{
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
-
-body {
+body
+{
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
 }
-
 header
 {
   position: fixed;
@@ -24,62 +23,30 @@ header
   background-color: #0d74b1;
   z-index: 1000;
 }
-
-.container {
-  max-width: 1200px;
-  height: 100%;
-  margin: auto;
+.container
+{
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
-
-.logo {
+.logo
+{
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-
-.right a {
+.right a
+{
   margin-left: 20px;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
 }
-
-.right a:hover {
+.right a:hover
+{
   color: #101732;
 }
-.sub-header {
-  position: fixed;
-  top: 80px;
-  width: 100%;
-  height: 40px;
-  background: #eee;
-  border-bottom: 1px solid #ccc;
-  z-index: 999;
-}
-
-.sub-container {
-  max-width: 1200px;
-  margin: auto;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.sub-container a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.sub-container a:hover {
-  color: #0d74b1;
-}
-
 .banner
 {
   position: relative;
@@ -139,6 +106,21 @@ header
   border: none;
   cursor: pointer;
 }
+.destinations
+{
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+.destinations h2
+{
+  font-size: 80px;
+}
+.destinations p
+{
+  font-size: 25px;
+  margin: 10px 0 50px;
+}
 
 .cards {
   max-width: 1200px;
@@ -165,10 +147,6 @@ header
   aspect-ratio: 1 / 1;  
   object-fit: cover;
   transition: 0.4s;
-}
-
-.card:hover img {
-  transform: scale(1.1);
 }
 .card h3 {
   margin: 10px;
@@ -200,7 +178,7 @@ footer {
 .container-footer-right{
   display:flex;
   gap:100px;
-  align-items: centerP;
+  align-items: center;
 }
 @media (max-width: 900px) {
   .cards {
