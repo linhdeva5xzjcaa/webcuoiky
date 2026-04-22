@@ -5,20 +5,21 @@
     <title>Booking Resort</title>
     <link rel = "stylesheet" href = "resort.css">
   </head>
-  <body>
-    <header>
-      <div class = "container">
-        <a href = "book.html" class = "logowrap">
-          <img src = "VIdeo/home.png" class = "logo">
-         </a>
-         <nav class = "right">
-          <a href = "book.html">Khách sạn</a>
-          <a href = "resort.html" class = "active">Resort</a>
-          <a href = "khuve.html">Vé vui chơi</a>
-          <a id = "login-link" href = "index.html" class = "btn-login">Đăng nhập</a>
-         </nav>
-      </div>
-    </header>
+  <body id="top">
+
+<header>
+  <div class="container">
+    <div class="left">
+      <a href="book.html"><img src="VIdeo/home.png" alt="Logo" class="logo"></a>
+    </div>
+    <nav class="right">
+      <a href="ks.html">Khách Sạn</a>
+      <a href="resort.html">Resort</a>
+      <a href="khuve.html">Vé vui chơi</a>
+      <a id="login-link" href="index.html">Đăng nhập</a>
+    </nav>
+  </div>
+</header>
     <div class = "sub-header">
       <div class = "sub-container">
         <a href = "#5sao" class = "active">5 sao</a>
@@ -34,12 +35,18 @@
         <h1>Nghỉ dưỡng sang trọng <br>Đẳng cấp 5 sao</h1>
         <p>Tận hưởng kỳ nghỉ đáng nhớ với những resort hàng đầu Việt Nam</p>
         <div class = "search-box">
-           <input type="text" id="s-dest" placeholder="📍 Tìm resort...">
+           <input type="text" id="s-dest" placeholder="Tìm resort...">
           <input type ="date" id = "s-in">
           <input type = "date" id = "s-out">
           <button onclick = "doSearch()">Tìm kiếm</button>
         </div>
       </div>
+      <section class="intro">
+  <div class="intro-container">
+    <h2>Giới thiệu về Booking Resort</h2>
+  </div>
+</section>
+
     </section>
      <div class="list">
 
