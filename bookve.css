@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
+  background-color: #0d74b1;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.right a:hover {
+  color: #101732;
+  transition: 0.3s;
+}
+
+/* Container căn giữa */
+.bodycontainer {
+  max-width: 1100px;
+  margin: 140px auto 20px; /* tránh bị header đè */
+  padding: 0 10px;
+}
+
+/* Layout ảnh */
+.gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 250px 250px;
+  gap: 12px;
+}
+
+.gallery div {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.big {
+  grid-row: 1 / 3;
+}
+.card
+{
+  margin-top: 15px;
+  background-color: #ffedd0;
+  width: 1080px;
+  height: 240px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.card-info ,ul ,li
+{
+  padding: 15px;
+}
+.card-info
+{
+  height: 100%;
+  overflow-y: auto;  
+}
+video
+{
+  background-color: #101732;
+}
+.cards
+{
+  margin-top: 15px;
+  background-color: white;
+  width: 715px;
+  height: 215px;
+  border-radius: 10px;
+  position: relative;
+}
+.cards-info
+{
+  padding: 15px;
+}
+/* Nút trong thẻ dịch vụ */
+.btn-group {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:first-child {
+  background-color: #0d74b1;
+  color: #fff;
+}
+.btn:last-child {
+  background-color: #ff9800;
+  color: #fff;
+}
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Popup */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal:target {
+  display: block; /* hiện khi được target */
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 5% auto;         /* giảm margin để modal cao hơn */
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;              /* rộng hơn một chút */
+  max-height: 80vh;        /* chiều cao tối đa bằng 80% màn hình */
+  overflow-y: auto;        /* bật cuộn dọc khi nội dung dài */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;   /* xếp dọc */
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.modal-body input {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;   /* tăng cỡ chữ */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.book-btn{
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  background:#ff5722;
+  color:#fff;
+  border:none;
+  padding:12px 18px;
+  font-size:16px;
+  border-radius:5px;
+  cursor:pointer;
+}
+.close {
+  position: sticky;
+  top: 5px;
+  padding-left: 95%;
+  font-size: 28px;
+  text-decoration: none;
+  color: #000;
+}
