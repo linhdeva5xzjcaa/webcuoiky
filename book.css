@@ -46,21 +46,43 @@ header
 {
   color: #101732;
 }
-.banner
-{
+.banner {
   position: relative;
   height: 100vh;
+  overflow: hidden;
+  margin-top:80px;
 }
-.banner-img
-{
+
+/* KHUNG ẢNH */
+.banner-slides {
+  position: absolute;
   width: 100%;
-  height: 80%;
+  height: 70%;
+}
+
+/* TỪNG ẢNH */
+.banner-slides img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* ẢNH HIỆN */
+.banner-slides img.active {
+  opacity: 1;
+}
+
+/* ĐẢM BẢO CONTENT NẰM TRÊN */
+.banner-content {
+  z-index: 2;
 }
 .banner-content
 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -76,6 +98,59 @@ header
   font-size: 20px;
   margin: 10px 0 20px;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* NÚT */
+.banner-nav {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.banner-nav:hover {
+  background: rgba(0,0,0,0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.banner-nav.prev { left: 20px; }
+.banner-nav.next { right: 20px; }
+
+/* DOT */
+.banner-dots {
+  position: absolute;
+  bottom: 250px;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.banner-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-dots span.active {
+  background: white;
+  transform: scale(1.3);
 }
 .search-box
 {
@@ -186,5 +261,5 @@ footer {
 .container-footer-right{
   display:flex;
   gap:100px;
-  align-items: centerP;
+  align-items: center;
 }
