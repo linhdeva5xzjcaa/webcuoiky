@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Bố cục 4 phần</title>
+  <title>Trang chủ</title>
   <link rel="stylesheet" href="book.css">
   <script src="book.js" defer></script>
 </head>
@@ -23,21 +23,35 @@
   </div>
 </header>
 
-<section style="height: 800px;" class="banner">
-  <img src="VIdeo/HL.jpg" class="banner-img" alt="">
-  
+<section style="height:800px" class="banner">
+
+  <div class="banner-slides">
+    <img src="VIdeo/HL.jpg" class="active">
+    <img src="VIdeo/DaNang.webp">
+    <img src="VIdeo/PhuQuoc.jpg">
+  </div>
+
+  <!-- NÚT -->
+  <button class="banner-nav prev">&#10094;</button>
+  <button class="banner-nav next">&#10095;</button>
+
+  <!-- DOT -->
+  <div class="banner-dots"></div>
+
   <div class="banner-content">
     <h1>Trải nghiệm kỳ nghỉ tuyệt vời</h1>
     <p>Khách sạn - Resort - Vé vui chơi</p>
 
     <div class="search-box">
-      <input type="text" placeholder="Bạn muốn đi đâu?">
+      <input style="width: 80%" type="text" placeholder="Bạn muốn đi đâu?">
       <input type="date">
       <input type="date">
-      <button>Tìm kiếm</button>
+      <button style="width:20%">Tìm kiếm</button>
     </div>
   </div>
+
 </section>
+
 
 <main>
   <section style="height: 800px;" id="tag1" class="destinations">
