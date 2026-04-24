@@ -1,3 +1,7 @@
+if (performance.navigation.type === 1) {
+  window.scrollTo(0, 0);
+}
+
 const imgs = document.querySelectorAll(".banner-slides img");
 const dotsContainer = document.querySelector(".banner-dots");
 const prevBtn = document.querySelector(".banner-nav.prev");
