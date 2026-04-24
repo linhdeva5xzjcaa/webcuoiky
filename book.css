@@ -180,22 +180,14 @@ header
   border: none;
   cursor: pointer;
 }
-.destinations
-{
-  padding: 80px 20px;
-  background: #fff;
-  text-align: center;
+
+.menu{
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
-.destinations h2
-{
-  font-size: 80px;
-}
-.destinations p
-{
-  font-size: 25px;
-  margin: 10px 0 50px;
-}
-.cards
+
+.cards-menu
 {
   display: flex;
   flex-wrap: wrap;
@@ -203,31 +195,53 @@ header
   gap: 20px;
 }
 
-.card
+.card-menu
 {
-  width: 360px;
-  height: 280px;
+  width: 300px;
+  height: 500px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-.card
+.card-menu
 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover
+.card-menu:hover
 {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
-.card img
+.card-menu img
 {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(70%);
 }
+
+.title {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 40px;
+}
+
+.title h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.title p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+.container-card-ks{
+  margin-top: 150px;
+}
+
 .info
 {
   position: absolute;
@@ -240,6 +254,103 @@ a
   text-decoration: none !important;
   color: black;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 180px);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;  
+
+  grid-template-areas:
+  "phuquoc phuquoc vungtau"
+  "dalat quynhon vungtau"
+  "nhatrang danang danang"
+  "nhatrang phanthiet phuyen";
+}
+
+.card-grid {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card-grid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+.card-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+}
+
+.overlay h3 {
+  margin: 0;
+}
+
+.overlay p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.phuquoc { grid-area: phuquoc; }
+.dalat { grid-area: dalat; }
+.quynhon { grid-area: quynhon; }
+.vungtau { grid-area: vungtau; }
+.nhatrang { grid-area: nhatrang; }
+.danang { grid-area: danang; }
+.phanthiet { grid-area: phanthiet; }
+.phuyen { grid-area: phuyen; }
+.quangninh { grid-area: quangninh; }
+.tayninh { grid-area: tayninh; }
+
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 180px);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;  
+
+  grid-template-areas:
+  "nhatrang nhatrang danang"
+  "phuquoc vungtau vungtau"
+  "dalat dalat quynhon"
+  "phanthiet phuyen phuyen";
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 180px);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;  
+
+  grid-template-areas:
+  "phuquoc tayninh danang"
+  "phuquoc quangninh danang"
+  "dalat dalat quynhon"
+  "vungtau nhatrang quynhon";
+}
+
 footer {
   background: #101732;
   color: #fff;
