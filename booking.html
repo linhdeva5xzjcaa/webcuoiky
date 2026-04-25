@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt vé - SunWorld Hòn Thơm Phú Quốc</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container">
+    <div class="left">
+      <a href="book.html">
+        <img src="VIdeo/home.png" alt="Logo" class="logo">
+      </a>
+    </div>
+    <nav class="right">
+      <a href="book.html#tag1">Khách Sạn</a>
+      <a href="book.html#tag2">Resort</a>
+      <a style="color: #101732; font-weight: bold;" href="khuve.html">VÉ VUI CHƠI</a>
+      <a id="login-link" href="index.html">Đăng nhập</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== FORM ===== -->
+<div class="booking-wrap" id="booking-wrap">
+  <div class="booking-title">Thông tin đặt vé</div>
+  <div class="booking-subtitle">Vui lòng điền đầy đủ thông tin bên dưới</div>
+
+  <div class="ticket-summary">
+    <div>
+      <div class="ts-name" id="s-ticket">—</div>
+      <div class="ts-meta" id="s-date">—</div>
+    </div>
+    <div>
+      <div class="ts-total" id="s-total">—</div>
+      <div class="ts-qty" id="s-qty">—</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-label">Thông tin khách hàng</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Họ <span class="required">*</span></label>
+        <input type="text" id="lastName" placeholder="Nguyễn">
+        <div class="error-msg" id="err-lastName">Vui lòng nhập họ</div>
+      </div>
+      <div class="form-group">
+        <label>Tên <span class="required">*</span></label>
+        <input type="text" id="firstName" placeholder="Văn A">
+        <div class="error-msg" id="err-firstName">Vui lòng nhập tên</div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Email <span class="required">*</span></label>
+        <input type="email" id="email" placeholder="example@email.com">
+        <div class="error-msg" id="err-email">Email không hợp lệ</div>
+      </div>
+      <div class="form-group">
+        <label>Số điện thoại <span class="required">*</span></label>
+        <input type="tel" id="phone" placeholder="0123456789">
+        <div class="error-msg" id="err-phone">Vui lòng nhập SĐT</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Ghi chú</label>
+      <textarea id="notes" placeholder="Yêu cầu đặc biệt (nếu có)..."></textarea>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-label">Phương thức thanh toán</div>
+    <div class="payment-list" id="payment-list">
+      <label class="payment-item selected">
+        <input type="radio" name="payment" value="cash" checked>
+        <div>
+          <div class="p-name">Thanh toán tại quầy</div>
+          <div class="p-desc">Trả tiền mặt khi nhận voucher</div>
+        </div>
+      </label>
+      <label class="payment-item">
+        <input type="radio" name="payment" value="card">
+        <div>
+          <div class="p-name">Thẻ tín dụng / Ghi nợ</div>
+          <div class="p-desc">Visa, Mastercard, JCB</div>
+        </div>
+      </label>
+      <label class="payment-item">
+        <input type="radio" name="payment" value="momo">
+        <div>
+          <div class="p-name">Ví MoMo</div>
+          <div class="p-desc">Thanh toán qua ứng dụng MoMo</div>
+        </div>
+      </label>
+      <label class="payment-item">
+        <input type="radio" name="payment" value="zalopay">
+        <div>
+          <div class="p-name">ZaloPay</div>
+          <div class="p-desc">Thanh toán qua ZaloPay</div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <button class="btn-submit" onclick="submitBooking()">Xác nhận đặt vé</button>
+  <p class="secure-note">Thông tin của bạn được bảo mật an toàn</p>
+</div>
+
+<!-- ===== SUCCESS ===== -->
+<div id="success-screen">
+  <div class="success-icon">✓</div>
+  <div class="success-title">Đặt vé thành công!</div>
+  <div class="success-sub">Voucher xác nhận đã được gửi đến email của bạn</div>
+
+  <div class="booking-code-box">
+    <div class="booking-code-label">Mã đơn đặt vé</div>
+    <div class="booking-code" id="confirm-code">SW-000000</div>
+  </div>
+
+  <div class="confirm-grid" id="confirm-details"></div>
+  <a href="bookve.html" class="btn-back">← Quay lại trang vé</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer style="height: 200px;">
+  <div class="container-footer">
+    <div class="container-footer-left">
+      <div class="cot1">
+        <p style="font-size:20px;"><b>Thông tin liên hệ</b></p><br>
+        <p style="font-size:15px;">Số điện thoại: 0123456789</p><br>
+        <p style="font-size:15px;">Email: abcxyz@gmail.com</p>
+      </div>
+      <div class="cot2">
+        <p style="font-size:20px;"><b>Về NAME.com</b></p><br>
+        <p style="font-size:15px;">Về chúng tôi</p><br>
+        <p style="font-size:15px;">NAME Blog</p>
+      </div>
+      <div class="cot3">
+        <p style="font-size:20px;"><b>Thông tin cần biết</b></p><br>
+        <p style="font-size:15px;">Điều kiện &amp; Điều khoản</p><br>
+        <p style="font-size:15px;">Câu hỏi thường gặp</p>
+      </div>
+    </div>
+    <div class="container-footer-right">
+      <div class="cot4">
+        <p style="font-size:15px;">Bạn cần hỗ trợ? Hãy gọi ngay</p><br>
+        <p style="font-size:15px;">&#9742; Hotline: 1900 0000</p><br>
+        <p style="font-size:15px;">Địa chỉ: 235 Hoàng Quốc Việt</p>
+      </div>
+      <div class="cot5">
+        <img style="width:100px; height:100px;" src="VIdeo/qr.jpg" alt="QR"><br>
+        <img src="VIdeo/tai-appstore.png" alt="App Store"><br>
+        <img src="VIdeo/tai-google-play.png" alt="Google Play">
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="booking.js"></script>
+</body>
+</html>
