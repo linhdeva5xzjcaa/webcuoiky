@@ -2,11 +2,12 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=#top">
   <title>SunWorldHonThom-PhuQuoc</title>
   <link rel="stylesheet" href="bookve.css">
 </head>
 
-<body id="top" style="height: 4000px;">
+<body id="top">
 
 <header>
   <div class="container">
@@ -23,10 +24,20 @@
     </nav>
   </div>
 </header>
+<div class="sub-header">
+  <div class="sub-container">
+    <div class="sub-right">
+      <a href="#info">Thông tin</a>
+      <a href="#cap-treo">Vé cáp treo</a>
+      <a href="#show">Vé show</a>
+      <a href="#combo">Combo</a>
+    </div>
+  </div>
+</div>
 
 <!-- Nội dung -->
 <div class="bodycontainer">
-  <div style="font-size: 45px;font-weight: bold;color: #101732;">Vé SunWorld Hòn Thơm Phú Quốc</div>
+  <div id="info" style="font-size: 45px;font-weight: bold;color: #101732;">Vé SunWorld Hòn Thơm Phú Quốc</div>
   
   <div class="gallery">
     <div class="big">
@@ -57,28 +68,115 @@
   </div>
 
   <br><br><br><br><br><br><br>
-  <div style="font-size: 40px;font-weight: bold;color: #101732;">Các dịch vụ</div>
+  <div style="font-size: 40px;font-weight: bold;color: #101732;">Các dịch vụ</div><br>
+  <div id="cap-treo" style="font-size: 30px;font-weight: bold;color: #101732;">Vé cáp treo</div>
 
   <!-- Thẻ dịch vụ -->
+  <!-- Card 1: Vé cáp treo khứ hồi -->
   <div class="cards">
     <div class="cards-info">
-      <p style="font-size: 20px;"><b>[Hoàn hủy miễn phí 24h] Vé cáp treo khứ hồi</b></p>
-      <ul>
-        <p><b>Thông tin vé cáp treo</b></p>
-        <li>Giá: <b>889,000 VND</b></li>
-        <li>Xác nhận tức thì, vào cổng bằng voucher.</li>
-        <li>Hiệu lực vào ngày đã chọn.</li>
-      </ul>
-      <!-- Nút mở popup -->
+      <img src="VIdeo/captreo1.webp" alt="Vé cáp treo Hòn Thơm" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>[Hoàn hủy miễn phí 24h] Vé cáp treo khứ hồi</b></p>
+        <ul>
+          <p><b>Thông tin vé cáp treo</b></p>
+          <li>Giá: <b>889,000 VND</b></li>
+          <li>Xác nhận tức thì, vào cổng bằng voucher.</li>
+          <li>Hiệu lực vào ngày đã chọn.</li>
+        </ul>
+      </div>
       <div class="btn-group">
-        <a href="#popup-detail" class="btn">Xem chi tiết</a>
+        <a href="#popup-detail-1" class="btn">Xem chi tiết</a>
         <a href="#popup-book" class="btn">Đặt ngay</a>
       </div>
     </div>
   </div>
 
+  <br>
+  <div id="show" style="font-size: 30px;font-weight: bold;color: #101732;">Vé show</div>
+
+  <!-- Card 2: Vé Show Kiss of the Sea -->
+  <div class="cards">
+    <div class="cards-info">
+      <img src="VIdeo/KoTS.webp" alt="Vé Show Kiss Of The Sea" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>Vé Show Nụ Hôn Biển Cả - Kiss Of The Sea</b></p>
+        <ul>
+          <p><b>Thông tin vé show</b></p>
+          <li>Giá: <b>1,000,000 VND</b></li>
+          <li>Xác nhận tức thì, vào cổng bằng voucher.</li>
+          <li>Hiệu lực vào ngày đã chọn.</li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-detail-2" class="btn">Xem chi tiết</a>
+        <a href="#popup-book" class="btn">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+<div class="cards">
+    <div class="cards-info">
+      <img src="VIdeo/SoTS.webp" alt="Vé Symphony of the Sea" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>Vé Show Giao Hưởng Đại Dương - Symphony Of The Sea</b></p>
+        <ul>
+          <p><b>Thông tin vé show</b></p>
+          <li>Giá: <b>1,200,000 VND</b></li>
+          <li>Xác nhận tức thì, vào cổng bằng voucher.</li>
+          <li>Hiệu lực vào ngày đã chọn.</li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-detail-3" class="btn">Xem chi tiết</a>
+        <a href="#popup-book" class="btn">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="combo" style="font-size: 30px;font-weight: bold;color: #101732;">Combo</div>
+  <!-- Card 3: Vé Combo -->
+  <div class="cards">
+    <div class="cards-info">
+      <img src="VIdeo/KoTS1.webp" alt="Vé Combo" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>[Combo Tiết Kiệm] Vé cáp treo + Vé Show Kiss Of The Sea</b></p>
+        <ul>
+          <p><b>Thông tin combo</b></p>
+          <li>Giá: <b>1,699,000 VND</b></li>
+          <li>Xác nhận tức thì, vào cổng bằng voucher.</li>
+          <li>Hiệu lực vào ngày đã chọn.</li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-detail-4" class="btn">Xem chi tiết</a>
+        <a href="#popup-book" class="btn">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4: Vé Aquatopia -->
+  <div class="cards">
+    <div class="cards-info">
+      <img src="VIdeo/captreo1.webp" alt="Vé Aquatopia" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>[Combo full option]</b></p>
+        <ul>
+          <p><b>Thông tin combo</b></p>
+          <li>Giá: <b>5,500,000 VND</b></li>
+          <li>Xác nhận tức thì, vào cổng bằng voucher.</li>
+          <li>Hiệu lực vào ngày đã chọn.</li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-detail-5" class="btn">Xem chi tiết</a>
+        <a href="#popup-book" class="btn">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+
+
   <!-- Popup chi tiết -->
-  <div id="popup-detail" class="modal">
+  <div id="popup-detail-1" class="modal">
     <div class="modal-content">
       <a href="#close" class="close">&times;</a>
       <h2 style="font-size: 18px;color: dimgray;">Chi tiết</h2><br>
@@ -112,7 +210,190 @@
       </ul>
     </div>
   </div>
+  <div id="popup-detail-2" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2 style="font-size: 18px;color: dimgray;">Chi tiết</h2><br>
+      <p style="font-size: 25px;"><b>Vé Show Nụ Hôn Biển Cả - Kiss Of The Sea</b></p><br>
+      <p>Xác nhận tức thời: Đơn hàng xử lý ngay và voucher sẽ được xuất sau</p><br>
+      <p>Vào cổng bằng voucher</p><br>
+      <p>Hiệu lực vào ngày đã chọn. Voucher chỉ có giá trị trong ngày giờ chỉ định</p><br>
+      <p>Huỷ miễn phí: Có thể huỷ tối đa 1 ngày trước ngày tham gia để hoàn tiền đầy đủ</p><br>
 
+      <h3>Giới thiệu show</h3><br>
+      <p>Kiss of the Sea – Nụ Hôn Biển Cả là show diễn nghệ thuật đỉnh cao tái hiện huyền thoại biển cả qua màn trình diễn kết hợp xiếc, múa, ánh sáng và âm nhạc sống động. Đây là show diễn ngoài trời lớn nhất Phú Quốc, tổ chức ngay bên bờ biển lãng mạn của Hòn Thơm.</p><br>
+
+      <h3>Thông tin show</h3><br>
+      <p><b>Lịch diễn:</b></p>
+      <ul>
+        <li>Thứ 6, Thứ 7, Chủ nhật và các ngày lễ</li>
+        <li>Suất diễn: 20:00 – 21:15 (75 phút)</li>
+        <li>Địa điểm: Sân khấu ngoài trời – Sun World Hòn Thơm</li>
+      </ul>
+
+      <p><b>Bao gồm:</b></p>
+      <ul>
+        <li>01 vé xem show Kiss of the Sea</li>
+        <li>Chỗ ngồi theo hạng vé đã chọn</li>
+        <li>Trải nghiệm show diễn nghệ thuật 75 phút đẳng cấp quốc tế</li>
+      </ul>
+
+      <p><b>Không bao gồm:</b></p>
+      <ul>
+        <li>Vé cáp treo Hòn Thơm</li>
+        <li>Phương tiện di chuyển đến Hòn Thơm</li>
+        <li>Ăn uống và các chi phí cá nhân khác</li>
+      </ul>
+
+      <p><b>Điều kiện:</b></p>
+      <ul>
+        <li>Trẻ em cao ≤99cm được miễn phí (không có chỗ ngồi riêng)</li>
+        <li>Không hoàn vé nếu hủy trong vòng 24h trước giờ diễn</li>
+        <li>Khách cần có mặt trước giờ diễn ít nhất 30 phút</li>
+      </ul>
+    </div>
+  </div>
+<div id="popup-detail-3" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2 style="font-size: 18px;color: dimgray;">Chi tiết</h2><br>
+      <p style="font-size: 25px;"><b>Vé Show Giao Hưởng Đại Dương - Symphony Of The Sea</b></p><br>
+      <p>Xác nhận tức thời: Đơn hàng xử lý ngay và voucher sẽ được xuất sau</p><br>
+      <p>Vào cổng bằng voucher</p><br>
+      <p>Hiệu lực vào ngày đã chọn. Voucher chỉ có giá trị trong ngày giờ chỉ định</p><br>
+      <p>Huỷ miễn phí: Có thể huỷ tối đa 1 ngày trước ngày tham gia để hoàn tiền đầy đủ</p><br>
+
+      <h3>Giới thiệu show</h3><br>
+      <p>Symphony of the Sea – Giao Hưởng Đại Dương là show diễn nghệ thuật hàng đêm mang tầm vóc quốc tế, kết hợp âm nhạc giao hưởng sống, pháo hoa, ánh sáng laser và vũ đạo hoành tráng. Mỗi đêm diễn là một bản nhạc đại dương rực rỡ, để lại ấn tượng khó phai với người xem.</p><br>
+
+      <h3>Thông tin show</h3><br>
+      <p><b>Lịch diễn:</b></p>
+      <ul>
+        <li>Hàng đêm (trừ thứ 6 và thứ 7)</li>
+        <li>Suất diễn: 21:00 – 22:15 (75 phút)</li>
+        <li>Địa điểm: Nhà hát ngoài trời Grand Stage – Sun World Hòn Thơm</li>
+      </ul>
+
+      <p><b>Bao gồm:</b></p>
+      <ul>
+        <li>01 vé xem show Symphony of the Sea</li>
+        <li>Chỗ ngồi VIP theo hạng đã chọn</li>
+        <li>Trải nghiệm show diễn kết hợp nhạc giao hưởng sống & pháo hoa nghệ thuật 75 phút</li>
+        <li>1 coupon nước uống chào mừng</li>
+      </ul>
+
+      <p><b>Không bao gồm:</b></p>
+      <ul>
+        <li>Vé cáp treo Hòn Thơm</li>
+        <li>Vé Show Kiss of the Sea</li>
+        <li>Phương tiện di chuyển đến Hòn Thơm</li>
+        <li>Ăn uống và các chi phí cá nhân khác</li>
+      </ul>
+
+      <p><b>Điều kiện:</b></p>
+      <ul>
+        <li>Phù hợp mọi độ tuổi</li>
+        <li>Trẻ em cao ≤99cm được miễn phí (ngồi cùng người lớn)</li>
+        <li>Không hoàn vé nếu hủy trong vòng 24h trước giờ diễn</li>
+        <li>Khách cần có mặt trước giờ diễn ít nhất 30 phút để nhận chỗ ngồi</li>
+      </ul>
+    </div>
+  </div>
+  <div id="popup-detail-4" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2 style="font-size: 18px;color: dimgray;">Chi tiết</h2><br>
+      <p style="font-size: 25px;"><b>[Combo Tiết Kiệm] Vé cáp treo + Vé Show Kiss Of The Sea</b></p><br>
+      <p>Xác nhận tức thời: Đơn hàng xử lý ngay và voucher sẽ được xuất sau</p><br>
+      <p>Vào cổng bằng voucher</p><br>
+      <p>Hiệu lực vào ngày đã chọn. Voucher chỉ có giá trị trong ngày giờ chỉ định</p><br>
+      <p>Huỷ miễn phí: Có thể huỷ tối đa 1 ngày trước ngày tham gia để hoàn tiền đầy đủ</p><br>
+
+      <h3>Giới thiệu combo</h3><br>
+      <p>Gói Combo Tiết Kiệm giúp bạn tận hưởng trọn vẹn một ngày tại Hòn Thơm – từ chuyến cáp treo vượt biển ấn tượng ban ngày đến đêm show nghệ thuật Kiss of the Sea đặc sắc, tất cả với mức giá ưu đãi hơn mua lẻ.</p><br>
+
+      <h3>Thông tin sản phẩm</h3><br>
+      <p><b>Bao gồm:</b></p>
+      <ul>
+        <li>1 vé cáp treo Hòn Thơm khứ hồi</li>
+        <li>Vé vào Công viên nước Aquatopia và Làng Exotica</li>
+        <li>Vé vào Cầu Hôn (khung giờ: 07:00 - 19:00 / 20:30 - 20:40 / 21:45 - 23:00)</li>
+        <li>01 vé xem show Kiss of the Sea (suất 20:00)</li>
+        <li>1 coupon đồ uống (bia cho khách ≥18 tuổi hoặc nước trái cây cho khách ≥100cm)</li>
+      </ul>
+
+      <p><b>Không bao gồm:</b></p>
+      <ul>
+        <li>Vé Show Symphony of the Sea</li>
+        <li>Phương tiện di chuyển đến Hòn Thơm</li>
+        <li>Ăn uống và các chi phí cá nhân khác</li>
+      </ul>
+
+      <p><b>Tiết kiệm so với mua lẻ:</b></p>
+      <ul>
+        <li>Mua lẻ: 889,000 + 1,000,000 = 1,889,000 VND</li>
+        <li>Combo: 1,699,000 VND → <b>Tiết kiệm 190,000 VND</b></li>
+      </ul>
+
+      <p><b>Điều kiện:</b></p>
+      <ul>
+        <li>Trẻ em cao ≤99cm được miễn phí</li>
+        <li>Khách dưới 18 tuổi không được phục vụ bia</li>
+        <li>Show diễn tổ chức vào Thứ 6, Thứ 7, Chủ nhật và ngày lễ</li>
+        <li>Cần có mặt trước giờ show ít nhất 30 phút</li>
+      </ul>
+    </div>
+  </div>
+  <div id="popup-detail-5" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2 style="font-size: 18px;color: dimgray;">Chi tiết</h2><br>
+      <p style="font-size: 25px;"><b>[Combo Full Option] Trọn Gói Nghỉ Dưỡng & Giải Trí Hòn Thơm</b></p><br>
+      <p>Xác nhận tức thời: Đơn hàng xử lý ngay và voucher sẽ được xuất sau</p><br>
+      <p>Vào cổng bằng voucher</p><br>
+      <p>Hiệu lực vào ngày đã chọn. Voucher chỉ có giá trị trong ngày giờ chỉ định</p><br>
+      <p>Huỷ miễn phí: Có thể huỷ tối đa 1 ngày trước ngày tham gia để hoàn tiền đầy đủ</p><br>
+
+      <h3>Giới thiệu combo</h3><br>
+      <p>Gói Combo Full Option là lựa chọn hoàn hảo cho gia đình và nhóm bạn muốn trải nghiệm đầy đủ nhất tại Sun World Hòn Thơm. Từ cáp treo, công viên nước, đến 2 show diễn đỉnh cao – tất cả gói gọn trong một ngày không thể quên với mức giá tối ưu nhất.</p><br>
+
+      <h3>Thông tin sản phẩm</h3><br>
+      <p><b>Bao gồm:</b></p>
+      <ul>
+        <li>1 vé cáp treo Hòn Thơm khứ hồi</li>
+        <li>Vé vào Công viên nước Aquatopia (trọn ngày) và Làng Exotica</li>
+        <li>Vé vào Cầu Hôn (khung giờ: 07:00 - 19:00 / 20:30 - 20:40 / 21:45 - 23:00)</li>
+        <li>01 vé xem show Kiss of the Sea (suất 20:00)</li>
+        <li>01 vé xem show Symphony of the Sea (suất 21:00)</li>
+        <li>1 bữa trưa buffet hải sản tại nhà hàng Sun World</li>
+        <li>2 coupon đồ uống chào mừng</li>
+        <li>1 coupon bia/nước trái cây theo tiêu chuẩn</li>
+        <li>Dịch vụ đưa đón tàu cao tốc An Thới – Hòn Thơm khứ hồi</li>
+      </ul>
+
+      <p><b>Không bao gồm:</b></p>
+      <ul>
+        <li>Chi phí di chuyển đến bến tàu An Thới</li>
+        <li>Các dịch vụ thể thao dưới nước (lặn ngắm san hô, moto nước...)</li>
+        <li>Mua sắm và chi phí cá nhân khác</li>
+      </ul>
+
+      <p><b>Tiết kiệm so với mua lẻ:</b></p>
+      <ul>
+        <li>Tổng giá trị dịch vụ: ~6,500,000 VND</li>
+        <li>Combo Full Option: 5,500,000 VND → <b>Tiết kiệm hơn 1,000,000 VND</b></li>
+      </ul>
+
+      <p><b>Điều kiện:</b></p>
+      <ul>
+        <li>Áp dụng cho 1 người lớn (≥100cm)</li>
+        <li>Trẻ em cao ≤99cm được miễn phí cáp treo và công viên nước</li>
+        <li>Khách dưới 18 tuổi không được phục vụ bia</li>
+        <li>Tàu cao tốc khởi hành lúc 8:00, 10:00, 13:00 từ bến An Thới</li>
+        <li>Cần có mặt tại bến tàu trước 30 phút</li>
+      </ul>
+    </div>
+  </div>
   <!-- Popup đặt vé -->
   <div id="popup-book" class="modal">
   <div class="modal-content">
@@ -150,6 +431,8 @@
 </div>
 
 </div>
+</body>
+</html>
 <footer style="height: 200px;">
   <div class="container-footer">
   <div class="container-footer-left">
@@ -183,8 +466,5 @@
   </div>
 </div>
 </footer>
-
-</body>
-</html>
 </body>
 </html>
