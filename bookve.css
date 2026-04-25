@@ -49,6 +49,40 @@ header {
   color: #101732;
   transition: 0.3s;
 }
+.sub-header {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  height: 40px;
+  background-color: #f1f1f1;
+  z-index: 999;
+  border-bottom: 1px solid #ccc;
+}
+
+.sub-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 40px;
+}
+
+/* căn giữa menu */
+.sub-container
+{
+  justify-content: end;
+}
+
+.sub-right a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #0d74b1;
+  font-weight: bold;
+}
+
+.sub-right a:hover {
+  color: #101732;
+}
+
 
 /* Container căn giữa */
 .bodycontainer {
@@ -84,7 +118,8 @@ header {
 {
   margin-top: 15px;
   background-color: #ffedd0;
-  width: 1080px;
+  width: 100%;
+  max-width: 1080px;
   height: 240px;
   border-radius: 10px;
   overflow: hidden;
@@ -107,14 +142,31 @@ video
 {
   margin-top: 15px;
   background-color: white;
-  width: 715px;
-  height: 215px;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 215px;
   border-radius: 10px;
   position: relative;
 }
 .cards-info
 {
   padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.cards-thumbnail {
+  width: 250px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.cards-text {
+  flex: 1;
 }
 /* Nút trong thẻ dịch vụ */
 .btn-group {
