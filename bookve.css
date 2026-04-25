@@ -182,19 +182,24 @@ video
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  background-color: #0d74b1;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
 }
 .btn:first-child {
-  background-color: #0d74b1;
+  background-color: #0d74b1;  /* Xem chi tiết → xanh */
   color: #fff;
 }
 .btn:last-child {
-  background-color: #ff9800;
+  background-color: #ff9800;  /* Đặt ngay → cam */
   color: #fff;
 }
 .btn:hover {
   opacity: 0.85;
 }
-
 /* Popup */
 .modal {
   display: none;
@@ -233,6 +238,106 @@ video
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+/* ===== POPUP ĐẶT VÉ – đơn giản ===== */
+    #popup-book-modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      align-items: center;
+      justify-content: center;
+    }
+    #popup-book-modal.open { display: flex; }
+
+    .pbook-content {
+      background: #fff;
+      border-radius: 10px;
+      width: 400px;
+      max-width: 95vw;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+      overflow: hidden;
+    }
+
+    .pbook-header {
+      background: #0d74b1;
+      color: #fff;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .pbook-header h2 { font-size: 16px; margin: 0; }
+    .pbook-close {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .pbook-body { padding: 20px; }
+
+    .pbook-ticket-name {
+      font-weight: 700;
+      font-size: 14px;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+    .pbook-ticket-price {
+      font-size: 13px;
+      color: #0d74b1;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .pbook-group { margin-bottom: 14px; }
+    .pbook-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .pbook-group label .req { color: #e11d48; }
+    .pbook-group input {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1.5px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      outline: none;
+    }
+    .pbook-group input:focus { border-color: #0d74b1; }
+    .pbook-err { font-size: 12px; color: #e11d48; margin-top: 3px; display: none; }
+
+    .pbook-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+    .pbook-total .lbl { color: #666; }
+    .pbook-total .val { font-weight: 800; font-size: 15px; color: #0d74b1; }
+
+    .pbook-submit {
+      width: 100%;
+      padding: 11px;
+      background: #0d74b1;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .pbook-submit:hover { background: #0a5d91; }
 .form-group {
   display: flex;
   flex-direction: column;
