@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Khách sạn</title>
+  <link rel="stylesheet" href="choosepos.css">
+  <script src="ks.js" defer></script>
+</head>
+
+<body id="top">
+
+<header>
+  <div class="container">
+    <div class="left">
+      <a href="#"><img src="VIdeo/home.png" alt="Logo" class="logo"></a>
+    </div>
+    <nav class="right">
+      <a style="color:#101732;font-weight:bolder;" href="">Khách Sạn</a>
+      <a href="#tag2">Resort</a>
+      <a href="#tag3">Vé vui chơi</a>
+      <a id="login-link" href="index.html">Đăng nhập</a>
+    </nav>
+  </div>
+</header>
+
+<section style="height: 800px;" class="banner">
+  <img src="VIdeo/banner-ks.jpg" class="banner-img" alt="">
+  
+  <div class="banner-content">
+    <p id="slogan">Khách sạn tôt nhất cho chuyến đi của bạn</p>
+    <h1>Trải nghiệm kỳ nghỉ tuyệt vời</h1>
+    <p id="slogan">Giá tốt - Đặt nhanh - Không lo phát sinh</p>
+
+    <div class="search-box">
+      <input type="text" placeholder="Bạn muốn đi đâu?">
+      <input type="date">
+      <input type="date">
+      <button>Tìm kiếm</button>
+    </div>
+  </div>
+</section>
+
+<div class="container-card">
+   <div class="title">
+    <h2>Khám phá điểm đến</h2>
+    <p>Chọn địa điểm bạn muốn đến</p>
+  </div>
+<div class="grid">
+  <div class="card phuquoc">
+    <a href="phuquoc.html"><img src="VIdeo/phuquoc.jpg"></a>
+    <div class="overlay">
+      <h3>Phú Quốc</h3>
+      <p>920 khách sạn</p>
+    </div>
+  </div>
+
+  <div class="card dalat">
+    <img src="VIdeo/dalat.jpg">
+    <div class="overlay">
+      <h3>Đà Lạt</h3>
+      <p>1177 khách sạn</p>
+    </div>
+  </div>
+
+  <div class="card quynhon">
+    <img src="VIdeo/quynhon.jpg">
+    <div class="overlay">
+      <h3>Quy Nhơn</h3>
+      <p>332 khách sạn</p>
+    </div>
+  </div>
+
+  <div class="card vungtau">
+    <img src="VIdeo/vungtau.jpg">
+    <div class="overlay">
+      <h3>Vũng Tàu</h3>
+      <p>920 khách sạn</p>
+    </div>
+  </div>
+
+  <div class="card nhatrang">
+    <img src="VIdeo/nhatrang.jpg">
+    <div class="overlay">
+      <h3>Nha Trang</h3>
+      <p>1177 khách sạn</p>
+    </div>
+  </div>
+
+  <div class="card danang">
+    <img src="VIdeo/danang.png">
+    <div class="overlay">
+      <h3>Đà Nẵng</h3>
+      <p>332 khách sạn</p>
+    </div>
+  </div>
+
+  <div class="card phanthiet">
+    <img src="VIdeo/phanthiet.jpg">
+    <div class="overlay">
+      <h3>Phan Thiết</h3>
+      <p>332 khách sạn</p>
+    </div>
+  </div>
+
+  <div class="card phuyen">
+    <img src="VIdeo/phuyen.jpg">
+    <div class="overlay">
+      <h3>Phú Yên</h3>
+      <p>332 khách sạn</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer style="height: 200px;">
+  <div class="container-footer">
+  <div class="container-footer-left">
+    <div class="cot1">
+    <p style="font-size: 20px;"><b>Thông tin liên hệ</b></p><br>
+    <p style="font-size: 15px;">Số điện thoại:0123456789</p><br>
+    <p style="font-size: 15px;">Email:abcxyz@gmail.com</p>
+  </div>
+  <div class="cot2">
+    <p style="font-size: 20px;"><b>Về NAME.com</b></p><br>
+    <p style="font-size: 15px;">Về chúng tôi</p><br>
+    <p style="font-size: 15px;">NAME Blog</p>
+  </div>
+  <div class="cot3">
+    <p style="font-size: 20px;"><b>Thông tin cần biết</b></p><br>
+    <p style="font-size: 15px;">Điều kiện & Điều khoản</p><br>
+    <p style="font-size: 15px;">Câu hỏi thường gặp</p>
+  </div>
+  </div>
+  <div class="container-footer-right">
+  <div class="cot4">
+    <p style="font-size: 15px;">Bạn cần hỗ trợ ? Hãy gọi ngay</p><br>  
+    <p style="font-size: 15px;">&#9742; Hotline: 1900 0000</p><br>
+    <p style="font-size: 15px;">Địa chỉ: 235 Hoàng Quốc Việt</p>
+  </div>
+  <div class="cot5">
+    <img style="width:100px ;height:100px;" src="VIdeo/qr.jpg"><br>
+    <img src="VIdeo/tai-appstore.png"><br>
+    <img src="VIdeo/tai-google-play.png">
+  </div>
+  </div>
+</div>
+</footer>
+
+<script>
+window.onload = function () {
+  if (performance.getEntriesByType("navigation")[0].type === "reload") {
+    window.scrollTo(0, 0);
+  }
+};
+</script>
+
+</body>
+</html>
