@@ -149,7 +149,9 @@ header {
 }
 
 .section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Tăng khoảng cách một chút cho thoáng */
+  text-align: center;   /* Dòng này giúp chữ ra giữa */
+  font-size: 32px;      /* Tùy chỉnh kích thước nếu bạn muốn nổi bật hơn */
 }
 .cards
 {
