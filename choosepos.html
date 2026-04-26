@@ -32,7 +32,7 @@
     <p id="slogan">Giá tốt - Đặt nhanh - Không lo phát sinh</p>
 
     <div class="search-box">
-      <input type="text" placeholder="Bạn muốn đi đâu?">
+      <input type="text" id="searchInput" placeholder="Bạn muốn đi đâu?">
       <input type="date">
       <input type="date">
       <button>Tìm kiếm</button>
@@ -46,7 +46,7 @@
     <p>Chọn địa điểm bạn muốn đến</p>
   </div>
 <div class="grid">
-  <div class="card phuquoc">
+  <div class="card phuquoc" data-name="phú quốc">
     <a href="phuquoc.html"><img src="VIdeo/phuquoc.jpg"></a>
     <div class="overlay">
       <h3>Phú Quốc</h3>
@@ -54,7 +54,7 @@
     </div>
   </div>
 
-  <div class="card dalat">
+  <div class="card dalat" data-name="đà lạt">
     <img src="VIdeo/dalat.jpg">
     <div class="overlay">
       <h3>Đà Lạt</h3>
@@ -62,7 +62,7 @@
     </div>
   </div>
 
-  <div class="card quynhon">
+  <div class="card quynhon" data-name="quy nhơn">
     <img src="VIdeo/quynhon.jpg">
     <div class="overlay">
       <h3>Quy Nhơn</h3>
@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <div class="card vungtau">
+  <div class="card vungtau" data-name="vũng tàu">
     <img src="VIdeo/vungtau.jpg">
     <div class="overlay">
       <h3>Vũng Tàu</h3>
@@ -78,15 +78,15 @@
     </div>
   </div>
 
-  <div class="card nhatrang">
+  <div class="card nhatrang" data-name="nha trang">
     <img src="VIdeo/nhatrang.jpg">
     <div class="overlay">
       <h3>Nha Trang</h3>
       <p>1177 khách sạn</p>
     </div>
   </div>
-
-  <div class="card danang">
+ 
+  <div class="card danang" data-name="đà nẵng">
     <img src="VIdeo/danang.png">
     <div class="overlay">
       <h3>Đà Nẵng</h3>
@@ -94,7 +94,7 @@
     </div>
   </div>
 
-  <div class="card phanthiet">
+  <div class="card phanthiet" data-name="phan thiết">
     <img src="VIdeo/phanthiet.jpg">
     <div class="overlay">
       <h3>Phan Thiết</h3>
@@ -102,7 +102,7 @@
     </div>
   </div>
 
-  <div class="card phuyen">
+  <div class="card phuyen" data-name="phú yên">
     <img src="VIdeo/phuyen.jpg">
     <div class="overlay">
       <h3>Phú Yên</h3>
@@ -148,6 +148,50 @@
 </footer>
 
 <script>
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card');
+const grid = document.querySelector('.grid');
+
+// 👉 Hàm filter
+function filterCards() {
+  const keyword = searchInput.value.toLowerCase().trim();
+
+  cards.forEach(card => {
+    const name = (card.dataset.name || "").toLowerCase();
+
+    if (keyword === "" || name.includes(keyword)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// ❌ KHÔNG scroll khi đang gõ
+searchInput.addEventListener('input', filterCards);
+
+// ✅ Bấm Enter → filter + scroll
+searchInput.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    filterCards();
+    scrollToGrid();
+  }
+});
+
+// ✅ Bấm nút "Tìm kiếm"
+document.querySelector('.search-box button').addEventListener('click', function() {
+  filterCards();
+  scrollToGrid();
+});
+
+// 👉 Hàm scroll (gọn lại)
+function scrollToGrid() {
+  document.querySelector('.container-card').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
 window.onload = function () {
   if (performance.getEntriesByType("navigation")[0].type === "reload") {
     window.scrollTo(0, 0);
