@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt phòng – Wyndham Garden GrandWorld Phú Quốc</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+<header>
+  <div class="container-header">
+    <div class="left-header">
+      <a href="#"><img src="VIdeo/home.png" alt="Logo" class="logo"></a>
+    </div>
+    <nav class="right-header">
+      <a style="color:#101732;font-weight:bolder;" href="">Khách Sạn</a>
+      <a href="#tag2">Resort</a>
+      <a href="#tag3">Vé vui chơi</a>
+      <a id="login-link" href="index.html">Đăng nhập</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== BOOKING FORM ===== -->
+<div class="booking-wrap" id="booking-wrap">
+  <div class="booking-title">Xác nhận đặt phòng</div>
+  <div class="booking-subtitle">Kiểm tra lại thông tin và chọn phương thức thanh toán</div>
+
+  <!-- SUMMARY từ sessionStorage -->
+  <div class="ticket-summary" id="ticket-summary">
+    <div>
+      <div class="ts-hotel" id="s-hotel">—</div>
+      <div class="ts-name" id="s-room">—</div>
+      <div class="ts-meta" id="s-date">—</div>
+    </div>
+    <div class="ts-right">
+      <div class="ts-total" id="s-total">—</div>
+      <div class="ts-qty" id="s-qty">—</div>
+    </div>
+  </div>
+
+  <!-- THÔNG TIN KHÁCH HÀNG (chỉ hiển thị, không nhập) -->
+  <div class="section-card">
+    <div class="section-label"> Thông tin khách hàng</div>
+    <div class="info-display-grid" id="customer-info-display">
+      <!-- Điền bằng JS -->
+    </div>
+    <a href="ks1-phuquoc.html#popup-book" class="btn-edit-info"> Chỉnh sửa thông tin</a>
+  </div>
+
+  <!-- PHƯƠNG THỨC THANH TOÁN -->
+  <div class="section-card">
+    <div class="section-label"> Phương thức thanh toán</div>
+    <div class="payment-list">
+      <label class="payment-item selected">
+        <input type="radio" name="payment" value="cash" checked onchange="selectPayment(this)">
+        <div>
+          <div class="p-name">Thanh toán tại quầy</div>
+          <div class="p-desc">Trả tiền mặt khi nhận voucher</div>
+        </div>
+      </label>
+      <label class="payment-item">
+        <input type="radio" name="payment" value="card" onchange="selectPayment(this)">
+        <div>
+          <div class="p-name">Thẻ tín dụng / Ghi nợ</div>
+          <div class="p-desc">Visa, Mastercard, JCB</div>
+        </div>
+      </label>
+      <label class="payment-item">
+        <input type="radio" name="payment" value="momo" onchange="selectPayment(this)">
+        <div>
+          <div class="p-name">Ví MoMo</div>
+          <div class="p-desc">Thanh toán qua ứng dụng MoMo</div>
+        </div>
+      </label>
+      <label class="payment-item">
+        <input type="radio" name="payment" value="zalopay" onchange="selectPayment(this)">
+        <div>
+          <div class="p-name">ZaloPay</div>
+          <div class="p-desc">Thanh toán qua ZaloPay</div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <button class="btn-submit" onclick="submitBooking()">✔ Xác nhận &amp; Đặt phòng</button>
+  <p class="secure-note"> Thông tin của bạn được bảo mật an toàn</p>
+</div><!-- /#booking-wrap -->
+
+
+<!-- ===== SUCCESS SCREEN ===== -->
+<div id="success-screen">
+  <div class="success-icon">✓</div>
+  <div class="success-title">Đặt phòng thành công!</div>
+  <div class="success-sub">Voucher xác nhận đã được gửi đến email của bạn</div>
+
+  <div class="booking-code-box">
+    <div class="booking-code-label">Mã đặt phòng</div>
+    <div class="booking-code" id="confirm-code">KS-000000</div>
+  </div>
+
+  <div class="confirm-grid" id="confirm-details"></div>
+
+  <a href="ks1-phuquoc.html" class="btn-back">← Quay lại trang khách sạn</a>
+</div><!-- /#success-screen -->
+
+
+<!-- ===== FOOTER ===== -->
+<footer style="height: 200px;">
+  <div class="container-footer">
+  <div class="container-footer-left">
+    <div class="cot1">
+    <p style="font-size: 20px;"><b>Thông tin liên hệ</b></p><br>
+    <p style="font-size: 15px;">Số điện thoại:0123456789</p><br>
+    <p style="font-size: 15px;">Email:abcxyz@gmail.com</p>
+  </div>
+  <div class="cot2">
+    <p style="font-size: 20px;"><b>Về NAME.com</b></p><br>
+    <p style="font-size: 15px;">Về chúng tôi</p><br>
+    <p style="font-size: 15px;">NAME Blog</p>
+  </div>
+  <div class="cot3">
+    <p style="font-size: 20px;"><b>Thông tin cần biết</b></p><br>
+    <p style="font-size: 15px;">Điều kiện & Điều khoản</p><br>
+    <p style="font-size: 15px;">Câu hỏi thường gặp</p>
+  </div>
+  </div>
+  <div class="container-footer-right">
+  <div class="cot4">
+    <p style="font-size: 15px;">Bạn cần hỗ trợ ? Hãy gọi ngay</p><br>  
+    <p style="font-size: 15px;">&#9742; Hotline: 1900 0000</p><br>
+    <p style="font-size: 15px;">Địa chỉ: 235 Hoàng Quốc Việt</p>
+  </div>
+  <div class="cot5">
+    <img style="width:100px ;height:100px;" src="VIdeo/qr.jpg"><br>
+    <img src="VIdeo/tai-appstore.png"><br>
+    <img src="VIdeo/tai-google-play.png">
+  </div>
+  </div>
+</div>
+</footer>
+
+
+<script>
+
+let bookingData = null;
+
+(function loadData() {
+  const raw = sessionStorage.getItem('hotelBooking');
+  if (!raw) {
+    document.getElementById('ticket-summary').innerHTML =
+      '<p style="color:#e11d48;font-weight:600;padding:8px"> Không có thông tin đặt phòng. <a href="ks1-phuquoc.html">← Quay lại chọn phòng.</a></p>';
+    document.querySelector('.btn-submit').disabled = true;
+    return;
+  }
+
+  bookingData = JSON.parse(raw);
+
+  const fmt     = n => parseInt(n).toLocaleString('vi-VN');
+  const fmtDate = d => {
+  if (!d) return '—';
+  const [y,m,dd] = d.split('-');
+  return `${dd}/${m}/${y}`;
+};
+
+  document.getElementById('s-hotel').textContent = bookingData.hotelName || '';
+  document.getElementById('s-room').textContent  = bookingData.roomName  || '';
+  document.getElementById('s-date').textContent  =
+    `📅 ${fmtDate(bookingData.checkin)} → ${fmtDate(bookingData.checkout)} · 👥 ${bookingData.guests}`;
+  document.getElementById('s-total').textContent = fmt(bookingData.totalPrice) + ' VNĐ';
+  document.getElementById('s-qty').textContent   =
+    `${bookingData.qty} phòng × ${bookingData.nights} đêm · ${fmt(bookingData.pricePerNight)} VNĐ/đêm`;
+
+
+  const infoRows = [
+  ['Họ và tên', bookingData.name || '—'],
+  ['Email', bookingData.email || '—'],
+  ['Điện thoại', bookingData.phone || '—'],
+  ['Ghi chú', bookingData.notes || '(Không có)']
+];
+
+document.getElementById('customer-info-display').innerHTML =
+  infoRows.map(([l, v]) =>
+    `<div class="info-display-row">
+      <span class="info-display-label">${l}:</span>
+      <span class="info-display-val">${v}</span>
+    </div>`
+  ).join('');
+})();
+
+
+function selectPayment(radio) {
+  document.querySelectorAll('.payment-item').forEach(el => el.classList.remove('selected'));
+  radio.closest('.payment-item').classList.add('selected');
+}
+
+
+function submitBooking() {
+  if (!bookingData) return;
+
+  const payment = document.querySelector('input[name="payment"]:checked').value;
+  const paymentLabel = { cash:'Thanh toán tại quầy', card:'Thẻ tín dụng/Ghi nợ', momo:'Ví MoMo', zalopay:'ZaloPay' }[payment];
+  const code    = 'KS-' + Math.floor(100000 + Math.random() * 900000);
+  const fmt     = n => parseInt(n).toLocaleString('vi-VN');
+  const fmtDate = d => {
+  if (!d) return '—';
+  const [y,m,dd] = d.split('-');
+  return `${dd}/${m}/${y}`;
+};
+
+  document.getElementById('confirm-code').textContent = code;
+
+  const rows = [
+    ['Khách sạn',        bookingData.hotelName],
+    ['Loại phòng',       bookingData.roomName],
+    ['Ngày nhận phòng',  fmtDate(bookingData.checkin)],
+    ['Ngày trả phòng',   fmtDate(bookingData.checkout)],
+    ['Số đêm',           bookingData.nights + ' đêm'],
+    ['Số phòng',         bookingData.qty + ' phòng'],
+    ['Số khách', bookingData.guests],
+    ['Họ và tên', bookingData.name],
+    ['Email',            bookingData.email],
+    ['SĐT',              bookingData.phone],
+    ['Ghi chú',          bookingData.notes || '—'],
+    ['Thanh toán',       paymentLabel],
+    ['Tổng tiền',        fmt(bookingData.totalPrice) + ' VNĐ'],
+  ];
+
+  document.getElementById('confirm-details').innerHTML = rows.map(([l, v]) =>
+    `<div class="confirm-row"><span class="lbl">${l}</span><span class="val">${v}</span></div>`
+  ).join('');
+
+  sessionStorage.setItem('lastBookingCode', code);
+  sessionStorage.removeItem('hotelBooking');
+
+  document.getElementById('booking-wrap').style.display   = 'none';
+  document.getElementById('success-screen').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
