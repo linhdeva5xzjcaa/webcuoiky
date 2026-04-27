@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông tin về Resort</title>
+  <link rel="stylesheet" href="bookresort.css">
+</head>
+
+<body id="top">
+
+<header>
+  <div class="container">
+    <div class="left">
+      <a href="book.html">
+        <img src="VIdeo/home.png" alt="Logo" class="logo">
+      </a>
+    </div>
+    <nav class="right">
+      <a href="#tag1">Khách Sạn</a>
+      <a style="color: #101732;font-weight: bold;" href="resort.html">Resort</a>
+      <a href="#tag2">Khu vui chơi</a>
+      <a id="login-link" href="index.html">Đăng nhập</a>
+    </nav>
+  </div>
+</header>
+
+<div class="sub-header">
+  <div class="sub-container">
+    <div class="sub-right">
+      <a href="#info">Thông tin</a>
+      <a href="#phongdon">Phòng đơn</a>
+      <a href="#bietthu">Biệt thự</a>
+    </div>
+  </div>
+</div>
+
+<!-- Nội dung -->
+<div class="bodycontainer">
+  <div class="resort-header">
+    <h1>JW Marriott Phú Quốc</h1>
+    <div class="resort-meta">
+      <div class="stars">★★★★★</div>
+      <div class="badges">
+        <span class="badge">Giáp biển</span>
+        <span class="badge">Bãi biển riêng</span>
+      </div>
+      <div class="location">
+       📍 Bãi Khem, An Thới, Phú Quốc
+        <a href="https://maps.app.goo.gl/xtc4UF2S3TYWEwbX9">Xem bản đồ</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="big">
+      <img src="VIdeo/jw.jpg" alt="">
+    </div>
+    <div class="small">
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="VIdeo/YTDown_YouTube_JW-Marriott-Phu-Quoc-Emerald-Bay-Tuyet-t_Media_q4V4Pj39jtg_001_1080p.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="small">
+      <img src="VIdeo/jw2.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="booking-section">
+    <!-- LEFT -->
+    <div class="booking-left">
+
+      <div class="combo-box">
+
+  <div class="combo-header">
+    <h2>Tiện ích nổi bật</h2>
+    <span class="combo-tag">⭐ 5 sao</span>
+  </div>
+
+  <p class="combo-desc">
+    Trải nghiệm nghỉ dưỡng đẳng cấp tại JW Marriott Phú Quốc
+  </p>
+
+  <ul>
+    <li>🏖️ Bãi biển riêng</li>
+    <li>🏊 Hồ bơi vô cực</li>
+    <li>🍽️ Buffet sáng cao cấp</li>
+    <li>🧖 Spa & chăm sóc sức khỏe</li>
+    <li>🚗 Xe đưa đón sân bay</li>
+  </ul>
+
+</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="booking-right">
+      <div class="price-box">
+  
+  <h3>Giá phòng tham khảo</h3>
+
+  <p>Ngày thường <span>11,099,000đ / đêm</span></p>
+  <p>Cuối tuần <span>14,399,000đ / đêm</span></p>
+  <p>Lễ / Tết <span>19,299,000đ / đêm</span></p>
+
+  <button class="btn-book">Đặt phòng</button>
+
+
+  <p class="hotline">📞 1900 0000</p>
+</div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br>
+  <div style="font-size: 40px;font-weight: bold;color: #101732;">Các dịch vụ</div><br>
+  <div class="filter-box">
+
+  <!-- LOẠI PHÒNG -->
+  <div class="filter-group">
+    <p>Loại phòng:</p>
+    <label><input type="checkbox" value="room"> Phòng</label>
+    <label><input type="checkbox" value="villa"> Biệt thự</label>
+  </div>
+
+  <!-- GIƯỜNG -->
+  <div class="filter-group">
+    <p>Giường:</p>
+    <label><input type="checkbox" value="king"> King</label>
+    <label><input type="checkbox" value="double"> 2 giường</label>
+  </div>
+
+  <!-- TIỆN ÍCH -->
+  <div class="filter-group">
+    <p>Tiện ích:</p>
+    <label><input type="checkbox" value="view biển"> View biển</label>
+    <label><input type="checkbox" value="hồ bơi"> Hồ bơi</label>
+    <label><input type="checkbox" value="minibar"> Minibar</label>
+    <label><input type="checkbox" value="bữa sáng"> Bữa sáng</label>
+  </div>
+
+</div>
+  <div id="phongdon" style="font-size: 30px;font-weight: bold;color: #101732;">Giá phòng đơn</div>
+  
+
+  <!-- Thẻ dịch vụ: thêm data-room-name và data-room-price -->
+  <div class="cards" data-type="room"
+     data-bed="king"
+     data-amenities="view biển minibar bữa sáng">
+
+    <div class="cards-info">
+      <img src="VIdeo/Screenshot 2026-04-26 001214.png" alt="phòng king 1" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>Phòng Emerald Bay</b></p>
+        <p><b>Thông tin phòng</b></p>
+        Giá: <b>11,400,000 VNĐ/đêm</b>
+        <div class="amenities">
+          <span>View biển</span>
+          <span>🛏 King</span>
+          <span>Minibar</span>
+          <span>Máy lạnh</span>
+          <span>Bữa sáng</span>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-book" class="btn"
+           onclick="selectRoom('Phòng Emerald Bay', 11400000)">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="cards" data-type="room"
+     data-bed="king"
+     data-amenities="view sân vườn minibar bữa sáng">
+    <div class="cards-info">
+      <img src="VIdeo/kingjw1.jpg" alt="phòng 2" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>Phòng Rue De Lamarck</b></p>
+        Giá: <b>10,950,000 VNĐ/đêm</b>
+        <div class="amenities">
+          <span>View sân vườn</span>
+          <span>🛏 King</span>
+          <span>Wifi</span>
+          <span>Minibar</span>
+          <span>Bữa sáng</span>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-book" class="btn"
+           onclick="selectRoom('Phòng Rue De Lamarck', 10950000)">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards"
+     data-type="room"
+     data-bed="king"
+     data-amenities="ban công minibar bữa sáng">
+    <div class="cards-info">
+      <img src="VIdeo/suite.png" alt="suite turquise" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>Suite Turquoise</b></p>
+        <p><b>Thông tin</b></p>
+        Giá: <b>25,000,000 VNĐ/đêm</b>
+        <div class="amenities">
+          <span>Suite riêng tư</span>
+          <span>🛏 King</span>
+          <span>Ban công</span>
+          <span>Máy lạnh</span>
+          <span>Bữa sáng</span>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-book" class="btn"
+           onclick="selectRoom('Suite Turquoise', 25000000)">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div id="bietthu" style="font-size: 30px;font-weight: bold;color: #101732;">Biệt thự</div>
+
+  <div class="cards"
+     data-type="villa"
+     data-bed="king"
+     data-amenities="hồ bơi minibar sân vườn">
+    <div class="cards-info">
+      <img src="VIdeo/bietthu.png" alt="biệt thự" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>Biệt Thự 1 Phòng Ngủ</b></p>
+        <p><b>Thông tin combo</b></p>
+        Giá: <b>40,000,000 VNĐ/đêm</b>
+        <div class="amenities">
+          <span>1 phòng ngủ</span>
+          <span>Sân trong</span>
+          <span>Minibar</span>
+          <span>Hồ bơi riêng</span>
+          <span>View vườn</span>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-book" class="btn"
+           onclick="selectRoom('Biệt Thự 1 Phòng Ngủ', 40000000)">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards"
+     data-type="villa"
+     data-bed="king"
+     data-amenities="hồ bơi sân hiên minibar">
+    <div class="cards-info">
+      <img src="VIdeo/bietthu2.png" alt="3 phong ngu" class="cards-thumbnail">
+      <div class="cards-text">
+        <p style="font-size: 20px;"><b>Biệt thự 3 phòng ngủ</b></p>
+        <p><b>Thông tin combo</b></p>
+        Giá: <b>80,000,000 VNĐ/đêm</b>
+        <div class="amenities">
+          <span>3 phòng ngủ</span>
+          <span>Hồ bơi riêng</span>
+          <span>Sân trong</span>
+          <span>Sân hiên</span>
+          <span>Mọi tiện ích</span>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a href="#popup-book" class="btn"
+           onclick="selectRoom('Biệt thự 3 phòng ngủ', 80000000)">Đặt ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ĐẶT PHÒNG -->
+  <div id="popup-book" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2>Đặt phòng ngay</h2>
+      <!-- Hiển thị phòng đang chọn -->
+      <p id="modal-room-label" style="color:#0d74b1;font-weight:bold;margin-bottom:10px;"></p>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Họ và tên <span style="color:red">*</span></label>
+          <input type="text" id="fullName" placeholder="Nguyễn Văn A">
+          <div id="err-fullName" style="color:red;font-size:12px;display:none;">Vui lòng nhập họ tên</div>
+        </div>
+
+        <div class="form-group">
+          <label>Email <span style="color:red">*</span></label>
+          <input type="email" id="email" placeholder="example@email.com">
+          <div id="err-email" style="color:red;font-size:12px;display:none;">Email không hợp lệ</div>
+        </div>
+
+        <div class="form-group">
+          <label>Số điện thoại <span style="color:red">*</span></label>
+          <input type="tel" id="phone" placeholder="0123456789">
+          <div id="err-phone" style="color:red;font-size:12px;display:none;">Vui lòng nhập số điện thoại</div>
+        </div>
+
+        <div class="form-group">
+          <label>Số lượng phòng</label>
+          <input type="number" id="qty" min="1" value="1">
+        </div>
+
+        <div class="form-group">
+          <label>Ngày check in <span style="color:red">*</span></label>
+          <input type="date" id="checkin">
+          <div id="err-checkin" style="color:red;font-size:12px;display:none;">Vui lòng chọn ngày nhận phòng</div>
+        </div>
+
+        <div class="form-group">
+          <label>Ngày check out <span style="color:red">*</span></label>
+          <input type="date" id="checkout">
+          <div id="err-checkout" style="color:red;font-size:12px;display:none;">Vui lòng chọn ngày trả phòng</div>
+        </div>
+
+        <div class="form-group">
+          <label>Ghi chú</label>
+          <textarea id="notes" placeholder="Yêu cầu đặc biệt (nếu có)..."></textarea>
+        </div>
+
+        <button class="book-btn" onclick="goToCheckout()">Đặt ngay</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end bodycontainer -->
+
+<footer style="height: 200px;">
+  <div class="container-footer">
+    <div class="container-footer-left">
+      <div class="cot1">
+        <p style="font-size: 20px;"><b>Thông tin liên hệ</b></p><br>
+        <p style="font-size: 15px;">Số điện thoại: 0123456789</p><br>
+        <p style="font-size: 15px;">Email: abcxyz@gmail.com</p>
+      </div>
+      <div class="cot2">
+        <p style="font-size: 20px;"><b>Về NAME.com</b></p><br>
+        <p style="font-size: 15px;">Về chúng tôi</p><br>
+        <p style="font-size: 15px;">NAME Blog</p>
+      </div>
+      <div class="cot3">
+        <p style="font-size: 20px;"><b>Thông tin cần biết</b></p><br>
+        <p style="font-size: 15px;">Điều kiện &amp; Điều khoản</p><br>
+        <p style="font-size: 15px;">Câu hỏi thường gặp</p>
+      </div>
+    </div>
+    <div class="container-footer-right">
+      <div class="cot4">
+        <p style="font-size: 15px;">Bạn cần hỗ trợ? Hãy gọi ngay</p><br>
+        <p style="font-size: 15px;">&#9742; Hotline: 1900 0000</p><br>
+        <p style="font-size: 15px;">Địa chỉ: 235 Hoàng Quốc Việt</p>
+      </div>
+      <div class="cot5">
+        <img style="width:100px; height:100px;" src="VIdeo/qr.jpg" alt="QR"><br>
+        <img src="VIdeo/tai-appstore.png" alt="App Store"><br>
+        <img src="VIdeo/tai-google-play.png" alt="Google Play">
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="bookresort.js"></script>
+</body>
+</html>
