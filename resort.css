@@ -121,7 +121,23 @@ header
   font-size: 25px;
   margin: 10px 0 50px;
 }
+.container h2 {
+  margin-left: 20%;
+}
 
+.title {
+  margin-top:20px;
+  text-align: center;
+}
+
+.title h2 {
+  margin-bottom: 5px;
+}
+
+.title p {
+  margin: 0;
+  color: #777;
+}
 .cards {
   max-width: 1200px;
   margin: 40px auto;
@@ -184,6 +200,15 @@ footer {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.book-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #0d74b1;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 @media (max-width: 500px) {
