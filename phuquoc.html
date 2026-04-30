@@ -1,203 +1,457 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Khách sạn Phú Quốc</title>
-  <link rel="stylesheet" href="phuquoc.css">
+<meta charset="UTF-8">
+<title>Đặt phòng khách sạn</title>
+<link rel="stylesheet" href="ks1-phuquoc.css">
 </head>
 
-<body id="top">
+<body>
 
 <header>
-  <div class="container">
-    <div class="left">
-      <a href="#"><img src="VIdeo/home.png" alt="Logo" class="logo"></a>
+  <div class="container-header">
+    <div class="left-header">
+       <a href="book.html">
+        <img src="VIdeo/home.png" alt="Logo" class="logo">
+      </a>
     </div>
-    <nav class="right">
+    <nav class="right-header">
       <a style="color:#101732;font-weight:bolder;" href="">Khách Sạn</a>
-      <a href="#tag2">Resort</a>
-      <a href="#tag3">Vé vui chơi</a>
+      <a href="resort.html">Resort</a>
+      <a href="khuve.html">Vé vui chơi</a>
       <a id="login-link" href="index.html">Đăng nhập</a>
     </nav>
   </div>
 </header>
 
-<section style="height: 800px;" class="banner">
-  <img src="VIdeo/banner-ks.jpg" class="banner-img" alt="">
-  
-  <div class="banner-content">
-    <p id="slogan">Khách sạn tôt nhất cho chuyến đi của bạn</p>
-    <h1>Trải nghiệm kỳ nghỉ tuyệt vời</h1>
-    <p id="slogan">Giá tốt - Đặt nhanh - Không lo phát sinh</p>
+<div class="container">
 
-    <div class="search-box">
-      <input type="text" placeholder="Bạn muốn đi đâu?">
-      <input type="date">
-      <input type="date">
-      <button>Tìm kiếm</button>
+  <!-- TITLE -->
+  <div class="title-box">
+    <h1>Khách sạn Wyndham Garden GrandWorld Phú Quốc ⭐⭐⭐⭐</h1>
+    <div class="rating-box">
+      <div class="score">9.4</div>
+      <p>Tuyệt vời</p>
     </div>
   </div>
-</section>
-<section class="choose-hotel">
-  <div class="khacksan">
-    <div>
-      <div style="font-size:30px"><b>Phú Quốc</b></div>
-      <br>
-      <div style="font-size: 20px;">Chọn khách sạn yêu thích của bạn</div>
-      
+  <p class="address">📍 Bãi Dài, Gành Dầu, Phú Quốc</p>
+
+  <!-- GALLERY -->
+  <div class="gallery">
+    <div class="main-img">
+      <img src="VIdeo/khachsan-wyndham-phuquoc.webp" alt="Khách sạn Wyndham">
+      <span class="tag">3N2Đ VMB + Ăn sáng</span>
+    </div>
+    <div class="sub-img">
+      <img src="VIdeo/ks1-anh2.webp" alt="">
+      <img src="VIdeo/ks1-anh3.webp" alt="">
+      <img src="VIdeo/ks1-anh4.webp" alt="">
+      <img src="VIdeo/ks1-anh5.webp" alt="">
     </div>
   </div>
-  <div class="container-card">
-    <h2>Khách sạn phổ biến ở Phú Quốc</h2>
-    <div class="hotel-card">
-        <a href="ks1-phuquoc.html"><img src="VIdeo/khachsan-wyndham-phuquoc.webp" class="hotel-img"></a>
 
-        <div class="hotel-info">
-            <a href="ks1-phuquoc.html" style="text-decoration: none; color:black"><h3>Khách sạn Wyndham Garden Grandworld Phú Quốc</h3></a>
-            <p class="location">📍 Bãi Dài , Gành Dầu</p>
-            <div class="tags">
-                <span>Phú Quốc United Center</span>
-                <span>Trong tổ hợp Grand World</span>
-                <span>VinBus đón tiễn sân bay</span>
-            </div>
-        </div>
+  <div class="hot">
+    🔥 Đang bán chạy | Đã bán 2 phòng trong 24h qua
+  </div>
 
-        <div class="hotel-price">
-            <span class="rating">8.1 Rất tốt</span>
-            <p>Giá trung bình</p>
-            <p class="price">1.076.981 VND</p>
-            <p>phòng/đêm</p>
-            <a href="ks1-phuquoc.html"><button>Xem phòng trống</button></a>
+  <!-- BOOKING BAR -->
+  <div class="booking-box">
+    <div class="field">
+      <label>Ngày nhận</label>
+      <input type="date" id="checkin">
+    </div>
+    <div class="field">
+      <label>Ngày trả</label>
+      <input type="date" id="checkout">
+    </div>
+    <div class="field guest-field">
+      <label>Số khách</label>
+      <div class="guest-display" onclick="toggleGuest()">
+        <span id="guestText">2 người lớn • 0 trẻ em</span>
+      </div>
+      <div class="guest-box">
+        <div class="guest-row">
+          <span>Người lớn</span>
+          <div class="counter">
+            <button type="button" onclick="changeCount('adult',-1)">−</button>
+            <span id="adult">2</span>
+            <button type="button" onclick="changeCount('adult',1)">+</button>
+          </div>
         </div>
+        <div class="guest-row">
+          <span>Trẻ em</span>
+          <div class="counter">
+            <button type="button" onclick="changeCount('child',-1)">−</button>
+            <span id="child">0</span>
+            <button type="button" onclick="changeCount('child',1)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>&nbsp;</label>
+      <button type="button" onclick="filterRooms()" style="margin-top:0">Tìm phòng</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <div class="left">
+      <h2>Combo 3N2Đ Vé máy bay + Bữa sáng + Làn trượt nước</h2>
+      <p><b>Combo bao gồm</b></p>
+      <ul>
+        <li>Vé máy bay khứ hồi với 7kg hành lý xách tay</li>
+        <li>2 đêm nghỉ dưỡng phòng Superior</li>
+        <li>Bữa sáng tiêu chuẩn tại nhà hàng Seafest</li>
+        <li>Vui chơi không giới hạn khu trượt nước từ 15:00 đến 17:00 hàng ngày</li>
+        <li>Miễn phí tham gia Foam Party tại hồ bơi chiều thứ Sáu</li>
+        <li>Miễn phí xem Venice Color Show mỗi tối &amp; biểu diễn pháo hoa cuối tuần tại Grand World</li>
+        <li>Tiện ích tiêu chuẩn:
+          <ul>
+            <li>Bể bơi ngoài trời rộng đến 800m²</li>
+            <li>Miễn phí: Yoga, Bóng nước, Aqua Aerobic, Zumba... theo lịch</li>
+            <li>Đưa đón theo lịch VinBus từ T2 Grand World đến VinWonders, Vinpearl Safari</li>
+            <li>Xe Tuktuk đưa đón trong Grand World</li>
+            <li>Wifi, phòng gym hiện đại, khu chơi trẻ em</li>
+            <li>Đi bộ đến Tổ hợp Giải trí &amp; Mua sắm Grand World</li>
+          </ul>
+        </li>
+      </ul>
+      <p><b>Điều kiện áp dụng</b></p>
+      <ul>
+        <li>Đặt tối thiểu 2 khách/phòng</li>
+        <li>Áp dụng cho khách Việt Nam</li>
+        <li>Phụ thu Thứ 5–6–7, một số ngày cao điểm, Giỗ Tổ và Lễ 30/4–1/5</li>
+      </ul>
     </div>
 
-    <div class="hotel-card">
-        <img src="VIdeo/khachsan-vinholiday-phuquoc.webp" class="hotel-img">
-
-        <div class="hotel-info">
-            <h3>Khách sạn VinHolidays Fiesta Phú Quốc</h3>
-            <p class="location">📍 Bãi Dài, Gành Dầu, Phú Quốc, tỉnh Kiên Giang</p>
-            <div class="tags">
-                <span>Trong tổ hợp Grand World</span>
-                <span>Dễ dàng đi bộ khám phá</span>
-            </div>
+    <div class="right">
+      <div class="price-box">
+        <h3>Khởi hành từ Hồ Chí Minh</h3>
+        <div class="price-item">
+          <span>01/04 – 02/05</span><b>4.299.000đ</b>
+        </div>
+        <div class="price-item active">
+          <span>03/05 – 31/05</span><b>4.099.000đ</b>
+        </div>
+        <div class="price-item">
+          <span>01/06 – 30/06</span><b>4.499.000đ</b>
         </div>
 
-        <div class="hotel-price">
-            <span class="rating">9.4 Xuất sắc</span>
-            <p>Giá trung bình</p>
-            <p class="price">2.524.230 VND</p>
-            <p>phòng/đêm</p>
-            <button>Xem phòng trống</button>
+        <h3 style="margin-top:15px">Khởi hành từ Hà Nội</h3>
+        <div class="price-item">
+          <span>01/04 – 02/05</span><b>9.299.000đ</b>
         </div>
+        <div class="price-item active">
+          <span>03/05 – 31/05</span><b>9.099.000đ</b>
+        </div>
+        <div class="price-item">
+          <span>01/06 – 30/06</span><b>9.499.000đ</b>
+        </div>
+
+        <button type="button">Yêu cầu đặt</button>
+        <p class="hotline">📞 1900 0000</p>
+      </div>
     </div>
-    <div class="hotel-card">
-        <img src="VIdeo/khachsan-lafesta-phuquoc.webp" class="hotel-img">
+  </div>
 
-        <div class="hotel-info">
-            <h3>Khách sạn La Festa Phu Quoc, Curio Collection by Hilton</h3>
-            <p class="location">📍 Sunset Town, An Thới, Phú Quốc, Kiên Giang 91000</p>
-            <div class="tags">
-                <span>Bãi Khem | Sunset Town</span>
-                <span>Thiết kế mang đậm phong cách địa trung hải</span>
-                <span>Gần Thị trấn hoàn hôn</span>
-            </div>
-        </div>
-
-        <div class="hotel-price">
-            <span class="rating">9.8 Tuyêt vời</span>
-            <p>Giá trung bình</p>
-            <p class="price">2.036.752 VND</p>
-            <p>phòng/đêm</p>
-            <button>Xem phòng trống</button>
-        </div>
+  <!-- FILTER -->
+  <div class="filter-box">
+    <div class="filter-group">
+      <b>Loại phòng:</b>
+      <label><input type="checkbox" class="type" value="thuong" onchange="filterRooms()"> Thường</label>
+      <label><input type="checkbox" class="type" value="caocap" onchange="filterRooms()"> Cao cấp</label>
     </div>
-    <div class="hotel-card">
-        <img src="VIdeo/khachsan-boilevard-phuquoc.webp" class="hotel-img">
-
-        <div class="hotel-info">
-            <h3>Khách sạn Boulevard Phú Quốc</h3>
-            <p class="location">📍 89 Trần Hưng Đạo, KP. 7, TT. Dương Đông, H. Phú Quốc, T. Kiên Giang</p>
-            <div class="tags">
-                <span>Chợ đêm Dinh Cậu</span>
-                <span>Hồ bơi ngoài trời</span>
-                <span>Bãi tắm riêng</span>
-                <span>Cách sân bay khoảng 12 phút lái xe</span>
-                <span>+2</span>
-            </div>
-        </div>
-
-        <div class="hotel-price">
-            <span class="rating">9.2 Tuyệt vời</span>
-            <p>Giá trung bình</p>
-            <p class="price">1.012.881 VND</p>
-            <p>phòng/đêm</p>
-            <button>Xem phòng trống</button>
-        </div>
+    <div class="filter-group">
+      <b>Giường:</b>
+      <label><input type="checkbox" class="bed" value="don" onchange="filterRooms()"> Đơn</label>
+      <label><input type="checkbox" class="bed" value="doi" onchange="filterRooms()"> Đôi</label>
     </div>
-    <div class="hotel-card">
-        <img src="VIdeo/khachsan-aquasun-phuquoc.webp" class="hotel-img">
-
-        <div class="hotel-info">
-            <h3>Khách sạn Aquasun Phú Quốc</h3>
-            <p class="location">📍 Hẻm 124 Trần Hưng Đạo, Thị trấn Dương Đông, Phú Quốc, Kiên Giang</p>
-            <div class="tags">
-                <span>Trọn gói 3 bữa & VinWonders</span>
-                <span>Tổ hợp nghỉ dưỡng Casino</span>
-            </div>
-        </div>
-
-        <div class="hotel-price">
-            <span class="rating">8.0 Rất tốt</span>
-            <p>Giá trung bình</p>
-            <p class="price">943.183 VND</p>
-            <p>phòng/đêm</p>
-            <button>Xem phòng trống</button>
-        </div>
+    <div class="filter-group">
+      <b>Bữa sáng:</b>
+      <label><input type="checkbox" class="breakfast" value="yes" onchange="filterRooms()"> Có</label>
+      <label><input type="checkbox" class="breakfast" value="no" onchange="filterRooms()"> Không</label>
     </div>
+  </div>
+
+  <!-- ROOMS -->
+  <div id="roomList">
+
+    <div class="room-card" data-type="thuong" data-bed="don" data-capacity="2" data-breakfast="no" data-available="3">
+      <img src="VIdeo/ks1-phong-giuong don.webp" alt="Phòng thường giường đơn">
+      <div class="room-info">
+        <h3>Phòng thường – Giường đơn</h3>
+        <p class="available-text">Còn 3 phòng</p>
+        <p>Giá: <b>1.724.221 VNĐ</b>/đêm</p>
+        <div class="tags">
+          <span>Vòi tắm đứng</span><span>Tủ lạnh</span>
+          <span>Tivi</span><span>Wifi</span><span>Máy lạnh</span>
+        </div>
+        <a href="#popup-book" class="book-btn" onclick="openPopup(this)">Đặt phòng</a>
+      </div>
+    </div>
+
+    <div class="room-card" data-type="caocap" data-bed="doi" data-capacity="3" data-breakfast="yes" data-available="3">
+      <img src="VIdeo/ks1-phong-caocap-giuongdoi.webp" alt="Phòng cao cấp giường đôi">
+      <div class="room-info">
+        <h3>Phòng cao cấp – Giường đôi</h3>
+        <p class="available-text">Còn 3 phòng</p>
+        <p>Giá: <b>2.035.912 VNĐ</b>/đêm</p>
+        <div class="tags">
+          <span>Vòi tắm đứng</span><span>Bồn tắm</span><span>Tủ lạnh</span>
+          <span>Tivi</span><span>Wifi</span><span>Máy lạnh</span><span>Ban công</span>
+        </div>
+        <a href="#popup-book" class="book-btn" onclick="openPopup(this)">Đặt phòng</a>
+      </div>
+    </div>
+
+    <div class="room-card" data-type="thuong" data-bed="doi" data-capacity="4" data-breakfast="no" data-available="3">
+      <img src="VIdeo/ks1-phong-giuongdoi.webp" alt="Phòng thường giường đôi">
+      <div class="room-info">
+        <h3>Phòng thường – Giường đôi</h3>
+        <p class="available-text">Còn 3 phòng</p>
+        <p>Giá: <b>1.874.000 VNĐ</b>/đêm</p>
+        <div class="tags">
+          <span>Vòi tắm đứng</span><span>Tủ lạnh</span>
+          <span>Tivi</span><span>Wifi</span><span>Máy lạnh</span>
+        </div>
+        <a href="#popup-book" class="book-btn" onclick="openPopup(this)">Đặt phòng</a>
+      </div>
+    </div>
+
+    <div class="room-card" data-type="caocap" data-bed="don" data-capacity="5" data-breakfast="yes" data-available="3">
+      <img src="VIdeo/ks1-phong-caocap-giuongdon.webp" alt="Phòng cao cấp giường đơn">
+      <div class="room-info">
+        <h3>Phòng cao cấp – Giường đơn</h3>
+        <p class="available-text">Còn 3 phòng</p>
+        <p>Giá: <b>2.261.000 VNĐ</b>/đêm</p>
+        <div class="tags">
+          <span>Vòi tắm đứng</span><span>Bồn tắm</span><span>Tủ lạnh</span>
+          <span>Tivi</span><span>Wifi</span><span>Máy lạnh</span><span>Ban công</span>
+        </div>
+        <a href="#popup-book" class="book-btn" onclick="openPopup(this)">Đặt phòng</a>
+      </div>
+    </div>
+
+  </div><!-- /#roomList -->
+</div><!-- /.container -->
+
+
+<!-- ===================== POPUP ===================== -->
+<div id="popup-book" class="popup">
+  <div class="popup-content">
+    <a href="#!" class="close" title="Đóng">×</a>
+    <h2>Đặt phòng</h2>
+
+    <!-- Thông tin đặt -->
+    <div class="info-box">
+      <p><b>Ngày nhận:</b> <span id="pCheckin">—</span></p>
+      <p><b>Ngày trả:</b>  <span id="pCheckout">—</span></p>
+      <p><b>Số khách:</b>  <span id="pGuest">—</span></p>
+      <p><b>Phòng còn trống:</b> <span id="popupAvailable">—</span></p>
+    </div>
+
+    <label>Số phòng</label>
+    <input type="number" id="roomQty" min="1" value="1" oninput="checkRoom()">
+    <p class="error" id="errQty"></p>
+
+    <label>Họ và tên</label>
+    <input type="text" id="name" placeholder="Nguyễn Văn A">
+    <p class="error" id="errName"></p>
+
+    <label>Email</label>
+    <input type="email" id="email" placeholder="example@email.com">
+    <p class="error" id="errEmail"></p>
+
+    <label>Số điện thoại</label>
+    <input type="tel" id="phone" placeholder="0901 234 567">
+    <p class="error" id="errPhone"></p>
+
+    <p class="error" id="errorMsg"></p>
+
+    <label>Ghi chú</label>
+    <textarea id="notes" class="input" placeholder="Nhập yêu cầu thêm (nếu có)"></textarea>
+
+    <button type="button" class="submit-btn" onclick="saveInfo()">Xác nhận đặt phòng</button>
+  </div>
 </div>
-</section>
-<footer style="height: 200px;">
-  <div class="container-footer">
-  <div class="container-footer-left">
-    <div class="cot1">
-    <p style="font-size: 20px;"><b>Thông tin liên hệ</b></p><br>
-    <p style="font-size: 15px;">Số điện thoại:0123456789</p><br>
-    <p style="font-size: 15px;">Email:abcxyz@gmail.com</p>
-  </div>
-  <div class="cot2">
-    <p style="font-size: 20px;"><b>Về NAME.com</b></p><br>
-    <p style="font-size: 15px;">Về chúng tôi</p><br>
-    <p style="font-size: 15px;">NAME Blog</p>
-  </div>
-  <div class="cot3">
-    <p style="font-size: 20px;"><b>Thông tin cần biết</b></p><br>
-    <p style="font-size: 15px;">Điều kiện & Điều khoản</p><br>
-    <p style="font-size: 15px;">Câu hỏi thường gặp</p>
-  </div>
-  </div>
-  <div class="container-footer-right">
-  <div class="cot4">
-    <p style="font-size: 15px;">Bạn cần hỗ trợ ? Hãy gọi ngay</p><br>  
-    <p style="font-size: 15px;">&#9742; Hotline: 1900 0000</p><br>
-    <p style="font-size: 15px;">Địa chỉ: 235 Hoàng Quốc Việt</p>
-  </div>
-  <div class="cot5">
-    <img style="width:100px ;height:100px;" src="VIdeo/qr.jpg"><br>
-    <img src="VIdeo/tai-appstore.png"><br>
-    <img src="VIdeo/tai-google-play.png">
-  </div>
-  </div>
-</div>
-</footer>
-</body>
+
 
 <script>
-window.onload = function () {
-  if (performance.getEntriesByType("navigation")[0].type === "reload") {
-    window.scrollTo(0, 0);
-  }
-};
-</script>
+   let currentPriceRaw = 0;
+   let currentRoomName = "";
+/* ============================================================
+   GUEST SELECTOR
+============================================================ */
+function toggleGuest() {
+  const box = document.querySelector('.guest-box');
+  box.style.display = box.style.display === 'block' ? 'none' : 'block';
+}
 
+function changeCount(type, val) {
+  const el = document.getElementById(type);
+  let num = parseInt(el.textContent) + val;
+  if (type === 'adult' && num < 1) num = 1;
+  if (type === 'child' && num < 0) num = 0;
+  el.textContent = num;
+  updateGuestText();
+  filterRooms(); // cập nhật filter theo số khách ngay lập tức
+}
+
+function updateGuestText() {
+  const a = document.getElementById('adult').textContent;
+  const c = document.getElementById('child').textContent;
+  document.getElementById('guestText').textContent = `${a} người lớn • ${c} trẻ em`;
+}
+
+// Đóng guest-box khi click ra ngoài
+document.addEventListener('click', e => {
+  if (!document.querySelector('.guest-field').contains(e.target)) {
+    document.querySelector('.guest-box').style.display = 'none';
+  }
+});
+
+
+/* ============================================================
+   FILTER ROOMS
+============================================================ */
+function filterRooms() {
+  const totalGuests =
+    parseInt(document.getElementById('adult').textContent) +
+    parseInt(document.getElementById('child').textContent);
+
+  const types      = [...document.querySelectorAll('.type:checked')].map(e => e.value);
+  const beds       = [...document.querySelectorAll('.bed:checked')].map(e => e.value);
+  const breakfasts = [...document.querySelectorAll('.breakfast:checked')].map(e => e.value);
+
+  document.querySelectorAll('.room-card').forEach(card => {
+    const ok =
+      totalGuests <= parseInt(card.dataset.capacity) &&
+      (types.length      === 0 || types.includes(card.dataset.type)) &&
+      (beds.length       === 0 || beds.includes(card.dataset.bed)) &&
+      (breakfasts.length === 0 || breakfasts.includes(card.dataset.breakfast));
+
+    card.classList.toggle('hidden', !ok);
+  });
+}
+
+
+/* ============================================================
+   POPUP
+============================================================ */
+let currentAvailable = 0;
+
+function openPopup(btn) {
+  const card = btn.closest('.room-card');
+
+  currentAvailable = parseInt(card.dataset.available);
+
+  // 👉 LẤY TÊN PHÒNG
+  currentRoomName = card.querySelector('h3').innerText;
+
+  // 👉 LẤY GIÁ (loại bỏ dấu chấm + chữ VNĐ)
+  const priceText = card.querySelector('p b').innerText;
+  currentPriceRaw = parseInt(priceText.replace(/\D/g, ''));
+
+  // Điền thông tin
+  const checkin  = document.getElementById('checkin').value;
+  const checkout = document.getElementById('checkout').value;
+  const adult    = document.getElementById('adult').textContent;
+  const child    = document.getElementById('child').textContent;
+
+  document.getElementById('pCheckin').textContent  = checkin  || 'Chưa chọn';
+  document.getElementById('pCheckout').textContent = checkout || 'Chưa chọn';
+  document.getElementById('pGuest').textContent    = `${adult} người lớn • ${child} trẻ em`;
+  document.getElementById('popupAvailable').textContent = `${currentAvailable} phòng`;
+
+  document.getElementById('roomQty').value = 1;
+  clearErrors();
+}
+
+function checkRoom() {
+  const qty = parseInt(document.getElementById('roomQty').value) || 0;
+  const err = document.getElementById('errQty');
+  if (qty < 1) {
+    showError(err, '❌ Số phòng tối thiểu là 1');
+  } else if (qty > currentAvailable) {
+    showError(err, `❌ Chỉ còn ${currentAvailable} phòng`);
+  } else {
+    hideError(err);
+  }
+}
+
+function saveInfo() {
+  clearErrors();
+  let valid = true;
+  const qty     = parseInt(document.getElementById('roomQty').value) || 0;
+  const name    = document.getElementById('name').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const phone   = document.getElementById('phone').value.trim();
+  const checkin  = document.getElementById('checkin').value;
+  const checkout = document.getElementById('checkout').value;
+  const adult   = document.getElementById('adult').textContent;
+  const child   = document.getElementById('child').textContent;
+  const notes = document.getElementById('notes').value.trim();
+  if (qty < 1) { showError(document.getElementById('errQty'), '❌ Vui lòng chọn ít nhất 1 phòng'); valid = false; }
+  else if (qty > currentAvailable) { showError(document.getElementById('errQty'), `❌ Chỉ còn ${currentAvailable} phòng`); valid = false; }
+  if (!name) { showError(document.getElementById('errName'), '❌ Vui lòng nhập họ tên'); valid = false; }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError(document.getElementById('errEmail'), '❌ Email không hợp lệ'); valid = false; }
+  if (!phone || !/^(0|\+84)[0-9]{8,10}$/.test(phone.replace(/\s/g,''))) { showError(document.getElementById('errPhone'), '❌ Số điện thoại không hợp lệ'); valid = false; }
+  if (!checkin) {
+  alert("Vui lòng chọn ngày nhận phòng");
+  return;
+}
+if (!checkout) {
+  alert("Vui lòng chọn ngày trả phòng");
+  return;
+}
+  if (!valid) return;
+  let nights = 1;
+  if (checkin && checkout) nights = Math.max(1, Math.round((new Date(checkout) - new Date(checkin)) / 86400000));
+  const totalPrice = currentPriceRaw * qty * nights;
+  const bookingData = {
+  type: 'hotel',
+  hotelName: 'Khách sạn Wyndham Garden GrandWorld Phú Quốc',
+  roomName: currentRoomName,
+
+  // 👉 giữ nguyên format yyyy-mm-dd
+  checkin,
+  checkout,
+
+  nights,
+  qty,
+  pricePerNight: currentPriceRaw,
+  totalPrice,
+
+  // 👉 tách riêng để dùng ở trang 2
+  adults: adult,
+  children: child,
+
+  // 👉 giữ luôn chuỗi cho tiện hiển thị
+  guests: `${adult} người lớn • ${child} trẻ em`,
+
+  name,
+  email,
+  phone,
+
+  notes,
+};
+  sessionStorage.setItem('hotelBooking', JSON.stringify(bookingData));
+  window.location.href = 'booking.html';
+}
+ 
+function formatDate(s) { const [y,m,d] = s.split('-'); return `${d}/${m}/${y}`; }
+function formatPrice(n) { return Number(n).toLocaleString('vi-VN'); }
+function showError(el, msg) { el.textContent = msg; el.style.display = 'block'; }
+function hideError(el) { el.textContent = ''; el.style.display = 'none'; }
+function clearErrors() { ['errQty','errName','errEmail','errPhone','errorMsg'].forEach(id => hideError(document.getElementById(id))); }
+
+// mở popup nếu có hash
+window.addEventListener('load', () => {
+  if (window.location.hash === '#popup-book') {
+    document.getElementById('popup-book').style.display = 'block';
+  }
+});
+</script>
+</body>
 </html>
