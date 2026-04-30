@@ -85,5 +85,5 @@
       qty:   qty
     });
 
-    window.location.href = 'booking.html?' + params.toString();
+    window.location.href = "thanhtoanve.html?" + params.toString();
   }
