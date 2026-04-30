@@ -99,7 +99,7 @@ function goToCheckout() {
   const phone    = document.getElementById("phone").value.trim();
   const qty      = document.getElementById("qty").value || 1;
   const checkin  = document.getElementById("checkin").value || "";
-  const notes    = document.getElementById("notes").value || "";
+  const notes  =  "";
 
   // Tách họ / tên
   let firstName = "", lastName = "";
