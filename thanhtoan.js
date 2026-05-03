@@ -1,10 +1,22 @@
 // ===== LẤY THAM SỐ TỪ URL =====
-const params     = new URLSearchParams(location.search);
-const ticketName = params.get('name')  || 'Vé SunWorld Hòn Thơm';
-const unitPrice  = parseInt(params.get('price')) || 889000;
-const visitDate  = params.get('date')  || '';
-const qty        = Math.max(1, parseInt(params.get('qty')) || 1);
-const total      = unitPrice * qty;
+const params = new URLSearchParams(location.search);
+
+const type = params.get('type');
+
+// dữ liệu
+let ticketName = params.get('name');
+const unitPrice = parseInt(params.get('price')) || 0;
+const visitDate = params.get('date') || '';
+const qty = Math.max(1, parseInt(params.get('qty')) || 1);
+
+// fallback thông minh
+if (!ticketName) {
+  ticketName = type === 'resort'
+    ? 'Đặt phòng Resort'
+    : 'Vé SunWorld Hòn Thơm';
+}
+
+const total = unitPrice * qty;
 
 // ===== FORMAT NGÀY =====
 function formatDate(d) {
@@ -13,13 +25,28 @@ function formatDate(d) {
   return `${day}/${m}/${y}`;
 }
 
-// ===== HIỂN THỊ THÔNG TIN VÉ =====
+// ===== HIỂN THỊ =====
 document.getElementById('s-ticket').textContent = ticketName;
-document.getElementById('s-date').textContent   = visitDate ? formatDate(visitDate) : '—';
-document.getElementById('s-total').textContent  = total.toLocaleString('vi-VN') + ' VND';
-document.getElementById('s-qty').textContent    = qty + ' vé × ' + unitPrice.toLocaleString('vi-VN');
+document.getElementById('s-date').textContent =
+  visitDate ? formatDate(visitDate) : '—';
+document.getElementById('s-total').textContent =
+  total.toLocaleString('vi-VN') + ' VND';
+document.getElementById('s-qty').textContent =
+  qty + ' × ' + unitPrice.toLocaleString('vi-VN');
 
-// ===== CHỌN PHƯƠNG THỨC THANH TOÁN =====
+// ===== AUTO FILL FORM =====
+if (params.get('firstName'))
+  document.getElementById('firstName').value = params.get('firstName');
+
+if (params.get('lastName'))
+  document.getElementById('lastName').value = params.get('lastName');
+
+if (params.get('email'))
+  document.getElementById('email').value = params.get('email');
+if (params.get('phone'))
+  document.getElementById('phone').value = params.get('phone');
+
+// ===== PAYMENT =====
 document.querySelectorAll('.payment-item').forEach(item => {
   item.addEventListener('click', () => {
     document.querySelectorAll('.payment-item').forEach(i => i.classList.remove('selected'));
@@ -27,31 +54,35 @@ document.querySelectorAll('.payment-item').forEach(item => {
   });
 });
 
-// ===== VALIDATE FORM =====
+// ===== VALIDATE =====
 function validateForm() {
   let valid = true;
+
   const fields = [
-    { id: 'lastName',  errId: 'err-lastName',  check: v => v.trim().length > 0 },
-    { id: 'firstName', errId: 'err-firstName', check: v => v.trim().length > 0 },
+    { id: 'lastName',  errId: 'err-lastName',  check: v => v.trim() !== '' },
+    { id: 'firstName', errId: 'err-firstName', check: v => v.trim() !== '' },
     { id: 'email',     errId: 'err-email',     check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
     { id: 'phone',     errId: 'err-phone',     check: v => v.trim().length >= 9 },
   ];
+
   fields.forEach(f => {
-    const val = document.getElementById(f.id).value;
+    const input = document.getElementById(f.id);
     const err = document.getElementById(f.errId);
-    if (!f.check(val)) {
+
+    if (!f.check(input.value)) {
       err.style.display = 'block';
-      document.getElementById(f.id).style.borderColor = '#e11d48';
+      input.style.borderColor = '#e11d48';
       valid = false;
     } else {
       err.style.display = 'none';
-      document.getElementById(f.id).style.borderColor = '#ddd';
+      input.style.borderColor = '#ddd';
     }
   });
+
   return valid;
 }
 
-// ===== XỬ LÝ ĐẶT VÉ =====
+// ===== SUBMIT =====
 function submitBooking() {
   if (!validateForm()) return;
 
@@ -62,25 +93,25 @@ function submitBooking() {
   const payment   = document.querySelector('input[name="payment"]:checked').value;
 
   const payLabels = {
-    cash:    'Tiền mặt tại quầy',
-    card:    'Thẻ tín dụng/Ghi nợ',
-    momo:    'Ví MoMo',
+    cash: 'Tiền mặt tại quầy',
+    card: 'Thẻ tín dụng/Ghi nợ',
+    momo: 'Ví MoMo',
     zalopay: 'ZaloPay'
   };
 
-  const code = 'SW-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+  const code = 'RS-' + Math.random().toString(36).substring(2, 8).toUpperCase();
 
-  document.getElementById('booking-wrap').style.display   = 'none';
+  document.getElementById('booking-wrap').style.display = 'none';
   document.getElementById('success-screen').style.display = 'block';
-  document.getElementById('confirm-code').textContent     = code;
+  document.getElementById('confirm-code').textContent = code;
 
   document.getElementById('confirm-details').innerHTML = `
     <div class="confirm-row"><span class="lbl">Tên khách</span><span class="val">${lastName} ${firstName}</span></div>
     <div class="confirm-row"><span class="lbl">Email</span><span class="val">${email}</span></div>
     <div class="confirm-row"><span class="lbl">Điện thoại</span><span class="val">${phone}</span></div>
-    <div class="confirm-row"><span class="lbl">Loại vé</span><span class="val">${ticketName}</span></div>
-    <div class="confirm-row"><span class="lbl">Ngày tham quan</span><span class="val">${visitDate ? formatDate(visitDate) : '—'}</span></div>
-    <div class="confirm-row"><span class="lbl">Số lượng</span><span class="val">${qty} vé</span></div>
+    <div class="confirm-row"><span class="lbl">Loại</span><span class="val">${ticketName}</span></div>
+    <div class="confirm-row"><span class="lbl">Ngày</span><span class="val">${visitDate ? formatDate(visitDate) : '—'}</span></div>
+    <div class="confirm-row"><span class="lbl">Số lượng</span><span class="val">${qty}</span></div>
     <div class="confirm-row"><span class="lbl">Thanh toán</span><span class="val">${payLabels[payment]}</span></div>
     <div class="confirm-row"><span class="lbl">Tổng tiền</span><span class="val" style="color:#0d74b1">${total.toLocaleString('vi-VN')} VND</span></div>
   `;
