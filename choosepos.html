@@ -12,14 +12,12 @@
 <header>
   <div class="container">
     <div class="left">
-       <a href="book.html">
-        <img src="VIdeo/home.png" alt="Logo" class="logo">
-      </a>
+      <a href="#"><img src="VIdeo/home.png" alt="Logo" class="logo"></a>
     </div>
     <nav class="right">
       <a style="color:#101732;font-weight:bolder;" href="">Khách Sạn</a>
-      <a href="resort.html">Resort</a>
-      <a href="khuve.html">Vé vui chơi</a>
+      <a href="#tag2">Resort</a>
+      <a href="#tag3">Vé vui chơi</a>
       <a id="login-link" href="index.html">Đăng nhập</a>
     </nav>
   </div>
@@ -149,57 +147,7 @@
 </div>
 </footer>
 
-<script>
-const searchInput = document.getElementById('searchInput');
-const cards = document.querySelectorAll('.card');
-const grid = document.querySelector('.grid');
-
-// 👉 Hàm filter
-function filterCards() {
-  const keyword = searchInput.value.toLowerCase().trim();
-
-  cards.forEach(card => {
-    const name = (card.dataset.name || "").toLowerCase();
-
-    if (keyword === "" || name.includes(keyword)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
-
-// ❌ KHÔNG scroll khi đang gõ
-searchInput.addEventListener('input', filterCards);
-
-// ✅ Bấm Enter → filter + scroll
-searchInput.addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') {
-    e.preventDefault();
-    filterCards();
-    scrollToGrid();
-  }
-});
-
-// ✅ Bấm nút "Tìm kiếm"
-document.querySelector('.search-box button').addEventListener('click', function() {
-  filterCards();
-  scrollToGrid();
-});
-
-// 👉 Hàm scroll (gọn lại)
-function scrollToGrid() {
-  document.querySelector('.container-card').scrollIntoView({
-    behavior: 'smooth'
-  });
-}
-
-window.onload = function () {
-  if (performance.getEntriesByType("navigation")[0].type === "reload") {
-    window.scrollTo(0, 0);
-  }
-};
-</script>
+<script src="choosepos.js"></script>
 
 </body>
 </html>
