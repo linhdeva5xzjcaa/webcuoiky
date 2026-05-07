@@ -26,7 +26,7 @@
 
 <div class="container">
 
-  <!-- TITLE -->
+
   <div class="title-box">
     <h1>Khách sạn Wyndham Garden GrandWorld Phú Quốc ⭐⭐⭐⭐</h1>
     <div class="rating-box">
@@ -36,7 +36,7 @@
   </div>
   <p class="address">📍 Bãi Dài, Gành Dầu, Phú Quốc</p>
 
-  <!-- GALLERY -->
+
   <div class="gallery">
     <div class="main-img">
       <img src="VIdeo/khachsan-wyndham-phuquoc.webp" alt="Khách sạn Wyndham">
@@ -54,7 +54,7 @@
     🔥 Đang bán chạy | Đã bán 2 phòng trong 24h qua
   </div>
 
-  <!-- BOOKING BAR -->
+
   <div class="booking-box">
     <div class="field">
       <label>Ngày nhận</label>
@@ -94,7 +94,7 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT -->
+
   <div class="main">
     <div class="left">
       <h2>Combo 3N2Đ Vé máy bay + Bữa sáng + Làn trượt nước</h2>
@@ -155,7 +155,7 @@
     </div>
   </div>
 
-  <!-- FILTER -->
+
   <div class="filter-box">
     <div class="filter-group">
       <b>Loại phòng:</b>
@@ -174,7 +174,7 @@
     </div>
   </div>
 
-  <!-- ROOMS -->
+
   <div id="roomList">
 
     <div class="room-card" data-type="thuong" data-bed="don" data-capacity="2" data-breakfast="no" data-available="3">
@@ -233,17 +233,17 @@
       </div>
     </div>
 
-  </div><!-- /#roomList -->
-</div><!-- /.container -->
+  </div>
+</div>
 
 
-<!-- ===================== POPUP ===================== -->
+
 <div id="popup-book" class="popup">
   <div class="popup-content">
     <a href="#!" class="close" title="Đóng">×</a>
     <h2>Đặt phòng</h2>
 
-    <!-- Thông tin đặt -->
+    
     <div class="info-box">
       <p><b>Ngày nhận:</b> <span id="pCheckin">—</span></p>
       <p><b>Ngày trả:</b>  <span id="pCheckout">—</span></p>
@@ -280,9 +280,7 @@
 <script>
    let currentPriceRaw = 0;
    let currentRoomName = "";
-/* ============================================================
-   GUEST SELECTOR
-============================================================ */
+
 function toggleGuest() {
   const box = document.querySelector('.guest-box');
   box.style.display = box.style.display === 'block' ? 'none' : 'block';
@@ -295,7 +293,7 @@ function changeCount(type, val) {
   if (type === 'child' && num < 0) num = 0;
   el.textContent = num;
   updateGuestText();
-  filterRooms(); // cập nhật filter theo số khách ngay lập tức
+  filterRooms(); 
 }
 
 function updateGuestText() {
@@ -304,7 +302,7 @@ function updateGuestText() {
   document.getElementById('guestText').textContent = `${a} người lớn • ${c} trẻ em`;
 }
 
-// Đóng guest-box khi click ra ngoài
+
 document.addEventListener('click', e => {
   if (!document.querySelector('.guest-field').contains(e.target)) {
     document.querySelector('.guest-box').style.display = 'none';
@@ -312,9 +310,7 @@ document.addEventListener('click', e => {
 });
 
 
-/* ============================================================
-   FILTER ROOMS
-============================================================ */
+
 function filterRooms() {
   const totalGuests =
     parseInt(document.getElementById('adult').textContent) +
@@ -336,9 +332,7 @@ function filterRooms() {
 }
 
 
-/* ============================================================
-   POPUP
-============================================================ */
+
 let currentAvailable = 0;
 
 function openPopup(btn) {
@@ -346,14 +340,14 @@ function openPopup(btn) {
 
   currentAvailable = parseInt(card.dataset.available);
 
-  // 👉 LẤY TÊN PHÒNG
+
   currentRoomName = card.querySelector('h3').innerText;
 
-  // 👉 LẤY GIÁ (loại bỏ dấu chấm + chữ VNĐ)
+
   const priceText = card.querySelector('p b').innerText;
   currentPriceRaw = parseInt(priceText.replace(/\D/g, ''));
 
-  // Điền thông tin
+
   const checkin  = document.getElementById('checkin').value;
   const checkout = document.getElementById('checkout').value;
   const adult    = document.getElementById('adult').textContent;
@@ -414,7 +408,7 @@ if (!checkout) {
   hotelName: 'Khách sạn Wyndham Garden GrandWorld Phú Quốc',
   roomName: currentRoomName,
 
-  // 👉 giữ nguyên format yyyy-mm-dd
+
   checkin,
   checkout,
 
@@ -423,11 +417,11 @@ if (!checkout) {
   pricePerNight: currentPriceRaw,
   totalPrice,
 
-  // 👉 tách riêng để dùng ở trang 2
+
   adults: adult,
   children: child,
 
-  // 👉 giữ luôn chuỗi cho tiện hiển thị
+
   guests: `${adult} người lớn • ${child} trẻ em`,
 
   name,
@@ -446,7 +440,6 @@ function showError(el, msg) { el.textContent = msg; el.style.display = 'block'; 
 function hideError(el) { el.textContent = ''; el.style.display = 'none'; }
 function clearErrors() { ['errQty','errName','errEmail','errPhone','errorMsg'].forEach(id => hideError(document.getElementById(id))); }
 
-// mở popup nếu có hash
 window.addEventListener('load', () => {
   if (window.location.hash === '#popup-book') {
     document.getElementById('popup-book').style.display = 'block';
