@@ -9,9 +9,7 @@ body {
   background: #f5f5f5;
 }
 
-/* ============================================================
-   HEADER
-============================================================ */
+
 header {
   position: fixed;
   top: 0;
@@ -41,9 +39,7 @@ header {
   font-weight: bold;
 }
 
-/* ============================================================
-   CONTAINER
-============================================================ */
+
 .container {
   max-width: 1200px;
   margin: 100px auto 40px;
@@ -55,9 +51,7 @@ header {
   margin-bottom: 10px;
 }
 
-/* ============================================================
-   TITLE
-============================================================ */
+
 .title-box {
   display: flex;
   justify-content: space-between;
@@ -82,9 +76,7 @@ header {
   font-size: 18px;
 }
 
-/* ============================================================
-   GALLERY
-============================================================ */
+
 .gallery {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -131,9 +123,7 @@ header {
   border-radius: 8px;
 }
 
-/* ============================================================
-   HOT BADGE
-============================================================ */
+
 .hot {
   background: #ffe5e5;
   color: red;
@@ -143,9 +133,7 @@ header {
   font-weight: bold;
 }
 
-/* ============================================================
-   BOOKING BAR
-============================================================ */
+
 .booking-box {
   position: sticky;
   top: 88px;
@@ -178,9 +166,7 @@ header {
   font-size: 14px;
 }
 
-/* ============================================================
-   GUEST SELECTOR
-============================================================ */
+
 .guest-field {
   position: relative;
 }
@@ -239,9 +225,7 @@ header {
   background: #0a5d8f;
 }
 
-/* ============================================================
-   MAIN (left info + right price)
-============================================================ */
+
 .main {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -268,9 +252,9 @@ header {
   line-height: 1.5;
 }
 
-/* RIGHT PRICE BOX */
+
 .right {
-  /* wrapper */
+
 }
 
 .price-box {
@@ -279,7 +263,7 @@ header {
   padding: 20px;
   border-radius: 10px;
   position: sticky;
-  top: 160px; /* dưới booking-bar */
+  top: 160px;
 }
 
 .price-box h3 {
@@ -304,9 +288,7 @@ header {
   font-weight: bold;
 }
 
-/* ============================================================
-   BUTTONS (global)
-============================================================ */
+
 button {
   width: 100%;
   padding: 12px;
@@ -325,9 +307,7 @@ button:hover {
   background: darkorange;
 }
 
-/* ============================================================
-   FILTER
-============================================================ */
+
 .filter-box {
   background: #fff;
   padding: 20px;
@@ -355,9 +335,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* ============================================================
-   ROOM CARDS
-============================================================ */
+
 .room-card {
   display: flex;
   gap: 15px;
@@ -438,9 +416,7 @@ button:hover {
   display: none !important;
 }
 
-/* ============================================================
-   POPUP
-============================================================ */
+
 .popup {
   position: fixed;
   inset: 0;
@@ -549,7 +525,7 @@ button:hover {
   margin: 2px 0 4px;
 }
 
-/* textarea giống input nhưng to hơn */
+
 textarea.input {
   width: 100%;
   padding: 10px 12px;
@@ -558,7 +534,7 @@ textarea.input {
   font-size: 14px;
   font-family: inherit;
   resize: vertical;
-  min-height: 100px; /* 👈 độ cao chính */
+  min-height: 100px;
   outline: none;
   transition: border 0.2s;
 }
