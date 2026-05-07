@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đặt phòng – Wyndham Garden GrandWorld Phú Quốc</title>
+  <title>Thanh toán</title>
   <link rel="stylesheet" href="booking.css">
 </head>
 <body>
@@ -11,25 +11,22 @@
 <header>
   <div class="container-header">
     <div class="left-header">
-      <a href="book.html">
-        <img src="VIdeo/home.png" alt="Logo" class="logo">
-      </a>
+      <a href="#"><img src="VIdeo/home.png" alt="Logo" class="logo"></a>
     </div>
     <nav class="right-header">
       <a style="color:#101732;font-weight:bolder;" href="">Khách Sạn</a>
-      <a href="resort.html">Resort</a>
-      <a href="khuve.html">Vé vui chơi</a>
+      <a href="#tag2">Resort</a>
+      <a href="#tag3">Vé vui chơi</a>
       <a id="login-link" href="index.html">Đăng nhập</a>
     </nav>
   </div>
 </header>
 
-<!-- ===== BOOKING FORM ===== -->
 <div class="booking-wrap" id="booking-wrap">
   <div class="booking-title">Xác nhận đặt phòng</div>
   <div class="booking-subtitle">Kiểm tra lại thông tin và chọn phương thức thanh toán</div>
 
-  <!-- SUMMARY từ sessionStorage -->
+
   <div class="ticket-summary" id="ticket-summary">
     <div>
       <div class="ts-hotel" id="s-hotel">—</div>
@@ -42,7 +39,7 @@
     </div>
   </div>
 
-  <!-- THÔNG TIN KHÁCH HÀNG (chỉ hiển thị, không nhập) -->
+
   <div class="section-card">
     <div class="section-label"> Thông tin khách hàng</div>
     <div class="info-display-grid" id="customer-info-display">
@@ -51,7 +48,7 @@
     <a href="ks1-phuquoc.html#popup-book" class="btn-edit-info"> Chỉnh sửa thông tin</a>
   </div>
 
-  <!-- PHƯƠNG THỨC THANH TOÁN -->
+
   <div class="section-card">
     <div class="section-label"> Phương thức thanh toán</div>
     <div class="payment-list">
@@ -88,10 +85,9 @@
 
   <button class="btn-submit" onclick="submitBooking()">✔ Xác nhận &amp; Đặt phòng</button>
   <p class="secure-note"> Thông tin của bạn được bảo mật an toàn</p>
-</div><!-- /#booking-wrap -->
+</div>
 
 
-<!-- ===== SUCCESS SCREEN ===== -->
 <div id="success-screen">
   <div class="success-icon">✓</div>
   <div class="success-title">Đặt phòng thành công!</div>
@@ -105,10 +101,9 @@
   <div class="confirm-grid" id="confirm-details"></div>
 
   <a href="ks1-phuquoc.html" class="btn-back">← Quay lại trang khách sạn</a>
-</div><!-- /#success-screen -->
+</div>
 
 
-<!-- ===== FOOTER ===== -->
 <footer style="height: 200px;">
   <div class="container-footer">
   <div class="container-footer-left">
@@ -143,103 +138,7 @@
 </div>
 </footer>
 
+<script src="booking.js"></script>
 
-<script>
-
-let bookingData = null;
-
-(function loadData() {
-  const raw = sessionStorage.getItem('hotelBooking');
-  if (!raw) {
-    document.getElementById('ticket-summary').innerHTML =
-      '<p style="color:#e11d48;font-weight:600;padding:8px"> Không có thông tin đặt phòng. <a href="ks1-phuquoc.html">← Quay lại chọn phòng.</a></p>';
-    document.querySelector('.btn-submit').disabled = true;
-    return;
-  }
-
-  bookingData = JSON.parse(raw);
-
-  const fmt     = n => parseInt(n).toLocaleString('vi-VN');
-  const fmtDate = d => {
-  if (!d) return '—';
-  const [y,m,dd] = d.split('-');
-  return `${dd}/${m}/${y}`;
-};
-
-  document.getElementById('s-hotel').textContent = bookingData.hotelName || '';
-  document.getElementById('s-room').textContent  = bookingData.roomName  || '';
-  document.getElementById('s-date').textContent  =
-    `📅 ${fmtDate(bookingData.checkin)} → ${fmtDate(bookingData.checkout)} · 👥 ${bookingData.guests}`;
-  document.getElementById('s-total').textContent = fmt(bookingData.totalPrice) + ' VNĐ';
-  document.getElementById('s-qty').textContent   =
-    `${bookingData.qty} phòng × ${bookingData.nights} đêm · ${fmt(bookingData.pricePerNight)} VNĐ/đêm`;
-
-
-  const infoRows = [
-  ['Họ và tên', bookingData.name || '—'],
-  ['Email', bookingData.email || '—'],
-  ['Điện thoại', bookingData.phone || '—'],
-  ['Ghi chú', bookingData.notes || '(Không có)']
-];
-
-document.getElementById('customer-info-display').innerHTML =
-  infoRows.map(([l, v]) =>
-    `<div class="info-display-row">
-      <span class="info-display-label">${l}:</span>
-      <span class="info-display-val">${v}</span>
-    </div>`
-  ).join('');
-})();
-
-
-function selectPayment(radio) {
-  document.querySelectorAll('.payment-item').forEach(el => el.classList.remove('selected'));
-  radio.closest('.payment-item').classList.add('selected');
-}
-
-
-function submitBooking() {
-  if (!bookingData) return;
-
-  const payment = document.querySelector('input[name="payment"]:checked').value;
-  const paymentLabel = { cash:'Thanh toán tại quầy', card:'Thẻ tín dụng/Ghi nợ', momo:'Ví MoMo', zalopay:'ZaloPay' }[payment];
-  const code    = 'KS-' + Math.floor(100000 + Math.random() * 900000);
-  const fmt     = n => parseInt(n).toLocaleString('vi-VN');
-  const fmtDate = d => {
-  if (!d) return '—';
-  const [y,m,dd] = d.split('-');
-  return `${dd}/${m}/${y}`;
-};
-
-  document.getElementById('confirm-code').textContent = code;
-
-  const rows = [
-    ['Khách sạn',        bookingData.hotelName],
-    ['Loại phòng',       bookingData.roomName],
-    ['Ngày nhận phòng',  fmtDate(bookingData.checkin)],
-    ['Ngày trả phòng',   fmtDate(bookingData.checkout)],
-    ['Số đêm',           bookingData.nights + ' đêm'],
-    ['Số phòng',         bookingData.qty + ' phòng'],
-    ['Số khách', bookingData.guests],
-    ['Họ và tên', bookingData.name],
-    ['Email',            bookingData.email],
-    ['SĐT',              bookingData.phone],
-    ['Ghi chú',          bookingData.notes || '—'],
-    ['Thanh toán',       paymentLabel],
-    ['Tổng tiền',        fmt(bookingData.totalPrice) + ' VNĐ'],
-  ];
-
-  document.getElementById('confirm-details').innerHTML = rows.map(([l, v]) =>
-    `<div class="confirm-row"><span class="lbl">${l}</span><span class="val">${v}</span></div>`
-  ).join('');
-
-  sessionStorage.setItem('lastBookingCode', code);
-  sessionStorage.removeItem('hotelBooking');
-
-  document.getElementById('booking-wrap').style.display   = 'none';
-  document.getElementById('success-screen').style.display = 'block';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
 </body>
 </html>
