@@ -1,0 +1,281 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #0d74b1;
+  z-index: 1000;
+}
+
+.container {
+  width: 100%;
+  padding: 0 30px;  
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.right a:hover {
+  color: #101732;
+}
+
+.banner {
+  margin-top: 80px;
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-size: 50px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+}
+
+.banner-content p {
+  font-size: 25px;
+  margin: 10px 0 20px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
+
+.search-box input,
+.search-box button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-box button {
+  background: orange;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: rgb(144, 94, 1);
+}
+
+.container-card {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #101732;
+  font-size: 30px;
+}
+
+/* CARD */
+.resort-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #fff;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.resort-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ẢNH */
+.resort-img {
+  width: 240px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* THÔNG TIN */
+.resort-info {
+  flex: 1;
+  padding-top: 3px;
+}
+
+.resort-info h3 {
+  font-size: 22px;
+  color: #101732;
+  margin-bottom: 8px;
+}
+
+.location {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* TAG */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tags span {
+ background: #f1f7ff;
+  color: #0d74b1;
+  margin-top:15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid #d0e3ff;
+}
+
+/* GIÁ */
+.resort-price {
+  width: 190px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+}
+
+
+.price {
+  color: #ff5715;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+/* BUTTON */
+button {
+  background: #0d74b1;
+  color: white;
+  border: none;
+  padding: 11px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #09598a;
+}
+
+/* responsive nhẹ */
+
+.price {
+  color: #ff5a00;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button {
+  background: #0071c2;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005999;
+}
+
+footer {
+  background: #101732;
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-footer-left {
+  display: flex;
+  gap: 100px;
+}
+
+.container-footer-right{
+  display:flex;
+  gap:100px;
+  align-items: center;
+}
+@media(max-width: 900px) {
+  .resort-card {
+    flex-direction: column;
+  }
+
+  .resort-img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .resort-price {
+    width: 100%;
+    text-align: left;
+    height: auto;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .rating {
+    align-self: flex-start;
+  }
+}
