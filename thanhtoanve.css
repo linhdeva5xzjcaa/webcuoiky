@@ -1,4 +1,4 @@
-/* ===== RESET & BASE ===== */
+
 *, *::before, *::after { 
   box-sizing: border-box; margin: 0; padding: 0;
 }
@@ -14,7 +14,6 @@ body {
   min-height: 100vh;
 }
 
-/* ===== HEADER ===== */
 header {
   position: fixed;
   top: 0;
@@ -51,7 +50,6 @@ header {
   transition: 0.3s;
 }
 
-/* ===== SUB-HEADER ===== */
 .sub-header {
   position: fixed;
   top: 80px;
@@ -79,7 +77,6 @@ header {
 
 .sub-right a:hover { color: #101732; }
 
-/* ===== STEPS BAR ===== */
 .steps-bar {
   margin-top: 120px;
   background: #fff;
@@ -129,7 +126,6 @@ header {
 }
 .step-line.done { background: #16a34a; }
 
-/* ===== BOOKING WRAP ===== */
 .booking-wrap {
   max-width: 560px;
   margin: 100px auto 40px;
@@ -149,7 +145,6 @@ header {
   margin-bottom: 24px;
 }
 
-/* ===== TICKET SUMMARY ===== */
 .ticket-summary {
   background: #fff;
   border: 1.5px solid #e5e7eb;
@@ -166,7 +161,6 @@ header {
 .ticket-summary .ts-total { font-size: 16px; font-weight: 800; color: #0d74b1; text-align: right; }
 .ticket-summary .ts-qty { font-size: 12px; color: #6b7280; text-align: right; }
 
-/* ===== SECTION CARD ===== */
 .section-card {
   background: #fff;
   border-radius: 8px;
@@ -184,7 +178,6 @@ header {
   margin-bottom: 16px;
 }
 
-/* ===== FORM ===== */
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
 .form-group { margin-bottom: 14px; }
@@ -218,7 +211,6 @@ header {
 .form-group textarea { resize: vertical; min-height: 70px; }
 .error-msg { font-size: 12px; color: #e11d48; margin-top: 3px; display: none; }
 
-/* ===== PAYMENT ===== */
 .payment-list { display: flex; flex-direction: column; gap: 8px; }
 
 .payment-item {
@@ -238,7 +230,6 @@ header {
 .payment-item .p-name { font-size: 14px; font-weight: 600; }
 .payment-item .p-desc { font-size: 12px; color: #888; }
 
-/* ===== SUBMIT BUTTON ===== */
 .btn-submit {
   width: 100%;
   padding: 13px;
@@ -262,7 +253,6 @@ header {
   margin-top: 8px;
 }
 
-/* ===== SUCCESS SCREEN ===== */
 #success-screen {
   display: none;
   max-width: 480px;
@@ -327,7 +317,6 @@ header {
 }
 .btn-back:hover { background: #0a5d91; }
 
-/* ===== PAGE LAYOUT (for other pages using booking.css) ===== */
 .page-wrap {
   max-width: 960px;
   margin: 32px auto;
@@ -358,7 +347,6 @@ header {
 
 .divider { border: none; border-top: 1px solid #e5e7eb; margin: 20px 0; }
 
-/* ===== SUMMARY CARD ===== */
 .summary-card {
   background: #fff;
   border-radius: 14px;
@@ -402,7 +390,6 @@ header {
   color: #92400e;
 }
 
-/* ===== FOOTER ===== */
 footer {
   background: #101732;
   color: #fff;
