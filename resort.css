@@ -139,7 +139,7 @@ header
   color: #777;
 }
 .cards {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 40px auto;
 
   display: grid;
@@ -159,7 +159,7 @@ header
 }
 
 .card img {
-  width: 100%;
+  width:100%;
   aspect-ratio: 1 / 1;  
   object-fit: cover;
   transition: 0.4s;
