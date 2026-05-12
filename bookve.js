@@ -1,4 +1,4 @@
-// Dữ liệu vé đang được chọn
+
   let currentTicket = { name: '', price: 0, img: '' };
 
   function getTodayStr() {
@@ -25,7 +25,6 @@
       'Đơn giá: ' + price.toLocaleString('vi-VN') + ' VND / vé';
     document.getElementById('pb-qty').value = 1;
 
-    // Thiết lập ngày: mặc định hôm nay, min hôm nay, max 1 năm tới
     const dateInput = document.getElementById('pb-date');
     const todayStr = getTodayStr();
     dateInput.min   = todayStr;
@@ -33,7 +32,6 @@
     dateInput.value = todayStr;
 
     updateTotal();
-    // Ẩn thông báo lỗi cũ
     document.getElementById('pb-err-date').style.display = 'none';
     document.getElementById('pb-err-qty').style.display  = 'none';
     document.getElementById('popup-book-modal').classList.add('open');
@@ -43,7 +41,6 @@
     document.getElementById('popup-book-modal').classList.remove('open');
   }
 
-  // Đóng popup khi click ra ngoài
   document.getElementById('popup-book-modal').addEventListener('click', function(e) {
     if (e.target === this) closeBookPopup();
   });
@@ -76,7 +73,6 @@
 
     if (!valid) return;
 
-    // Tạo URL với đầy đủ thông tin vé
     const params = new URLSearchParams({
       name:  currentTicket.name,
       price: currentTicket.price,
