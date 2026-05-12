@@ -202,6 +202,14 @@ button {
   cursor: pointer;
 }
 
+.hotel-price a {
+  display: block;
+}
+
+.hotel-price button {
+  width: 100%;
+}
+
 button:hover {
   background: #005999;
 }
