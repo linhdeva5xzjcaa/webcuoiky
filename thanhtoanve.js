@@ -1,4 +1,3 @@
-// ===== LẤY THAM SỐ TỪ URL =====
 const params     = new URLSearchParams(location.search);
 const ticketName = params.get('name')  || 'Vé SunWorld Hòn Thơm';
 const unitPrice  = parseInt(params.get('price')) || 889000;
@@ -6,20 +5,16 @@ const visitDate  = params.get('date')  || '';
 const qty        = Math.max(1, parseInt(params.get('qty')) || 1);
 const total      = unitPrice * qty;
 
-// ===== FORMAT NGÀY =====
 function formatDate(d) {
   if (!d) return '—';
   const [y, m, day] = d.split('-');
   return `${day}/${m}/${y}`;
 }
-
-// ===== HIỂN THỊ THÔNG TIN VÉ =====
 document.getElementById('s-ticket').textContent = ticketName;
 document.getElementById('s-date').textContent   = visitDate ? formatDate(visitDate) : '—';
 document.getElementById('s-total').textContent  = total.toLocaleString('vi-VN') + ' VND';
 document.getElementById('s-qty').textContent    = qty + ' vé × ' + unitPrice.toLocaleString('vi-VN');
 
-// ===== CHỌN PHƯƠNG THỨC THANH TOÁN =====
 document.querySelectorAll('.payment-item').forEach(item => {
   item.addEventListener('click', () => {
     document.querySelectorAll('.payment-item').forEach(i => i.classList.remove('selected'));
@@ -27,7 +22,6 @@ document.querySelectorAll('.payment-item').forEach(item => {
   });
 });
 
-// ===== VALIDATE FORM =====
 function validateForm() {
   let valid = true;
   const fields = [
@@ -51,7 +45,6 @@ function validateForm() {
   return valid;
 }
 
-// ===== XỬ LÝ ĐẶT VÉ =====
 function submitBooking() {
   if (!validateForm()) return;
 
