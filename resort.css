@@ -106,21 +106,6 @@ header
   border: none;
   cursor: pointer;
 }
-.destinations
-{
-  padding: 80px 20px;
-  background: #fff;
-  text-align: center;
-}
-.destinations h2
-{
-  font-size: 80px;
-}
-.destinations p
-{
-  font-size: 25px;
-  margin: 10px 0 50px;
-}
 .container h2 {
   margin-left: 20%;
 }
@@ -199,20 +184,5 @@ footer {
 @media (max-width: 900px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-.book-btn {
-    padding: 10px 20px;
-    border: none;
-    background: #0d74b1;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-@media (max-width: 500px) {
-  .cards {
-    grid-template-columns: 1fr;
   }
 }
