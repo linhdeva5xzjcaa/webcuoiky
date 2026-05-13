@@ -116,8 +116,6 @@ h2 {
   color: #101732;
   font-size: 30px;
 }
-
-/* CARD */
 .resort-card {
   display: flex;
   align-items: flex-start;
@@ -134,7 +132,7 @@ h2 {
   transform: translateY(-4px);
 }
 
-/* ẢNH */
+/* ảnh */
 .resort-img {
   width: 240px;
   height: 160px;
@@ -143,7 +141,7 @@ h2 {
   flex-shrink: 0;
 }
 
-/* THÔNG TIN */
+/* thông tin resort */
 .resort-info {
   flex: 1;
   padding-top: 3px;
@@ -161,7 +159,6 @@ h2 {
   font-size: 15px;
 }
 
-/* TAG */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -179,7 +176,6 @@ h2 {
   border: 1px solid #d0e3ff;
 }
 
-/* GIÁ */
 .resort-price {
   width: 190px;
   text-align: right;
@@ -197,7 +193,6 @@ h2 {
   margin: 6px 0;
 }
 
-/* BUTTON */
 button {
   background: #0d74b1;
   color: white;
@@ -212,8 +207,6 @@ button {
 button:hover {
   background: #09598a;
 }
-
-/* responsive nhẹ */
 
 .price {
   color: #ff5a00;
