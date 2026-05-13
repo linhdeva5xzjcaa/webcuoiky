@@ -114,26 +114,6 @@ header {
 .big {
   grid-row: 1 / 3;
 }
-.card
-{
-  margin-top: 15px;
-  background-color: #ffedd0;
-  width: 100%;
-  max-width: 1080px;
-  height: 240px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-.card-info ,ul ,li
-{
-  padding: 15px;
-}
-.card-info
-{
-  height: 100%;
-  overflow-y: auto;  
-}
 video
 {
   background-color: #101732;
@@ -166,28 +146,32 @@ video
 .filter-group input {
   margin-right: 6px;
 }
-.cards
-{
+.cards {
   margin-top: 15px;
   background-color: white;
-  width: 90%;
-  max-width: 1080px;
-  min-height: 215px;
-  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 180px;
+  border-radius: 12px;
   position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
-.cards-info
-{
-  padding: 15px;
+
+.cards:hover {
+  transform: translateY(-3px);
+}
+
+.cards-info {
+  padding: 12px;
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
-  gap: 15px;
+  gap: 12px;
 }
 
 .cards-thumbnail {
-  width: 250px;
-  height: 185px;
+  width: 220px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
@@ -195,35 +179,39 @@ video
 
 .cards-text {
   flex: 1;
+  font-size: 15px;
+  line-height: 1.5;
 }
-/* Nút trong thẻ dịch vụ */
+
+.cards-text p {
+  margin-bottom: 6px;
+}
+
 .btn-group {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+  bottom: 12px;
+  right: 12px;
 }
+
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  margin-right: 10px;
+  padding: 8px 16px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 14px;
   transition: 0.3s;
 }
+
 .btn:first-child {
   background-color: #0d74b1;
-  color: #fff;
-}
-.btn:last-child {
-  background-color: #ff9800;
-  color: #fff;
-}
-.btn:hover {
-  opacity: 0.85;
+  color: white;
 }
 
-/* Popup */
+.btn:hover {
+  opacity: 0.9;
+}
+/* hiện popup */
 .modal {
   display: none;
   position: fixed;
@@ -233,22 +221,22 @@ video
   background-color: rgba(0,0,0,0.5);
 }
 .modal:target {
-  display: block; /* hiện khi được target */
+  display: block; 
 }
 .modal-content {
   position: relative;
   background-color: #fff;
-  margin: 5% auto;         /* giảm margin để modal cao hơn */
+  margin: 5% auto;      
   padding: 20px;
   border-radius: 10px;
-  width: 45%;              /* rộng hơn một chút */
-  max-height: 80vh;        /* chiều cao tối đa bằng 80% màn hình */
-  overflow-y: auto;        /* bật cuộn dọc khi nội dung dài */
+  width: 45%;              
+  max-height: 80vh;   
+  overflow-y: auto;     
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .modal-body {
   display: flex;
-  flex-direction: column;   /* xếp dọc */
+  flex-direction: column; 
   gap: 15px;
   padding: 15px;
   border-radius: 10px;
@@ -257,7 +245,7 @@ video
 .modal-body input {
   width: 80%;
   padding: 12px;
-  font-size: 18px;   /* tăng cỡ chữ */
+  font-size: 18px;   
   border: 1px solid #ccc;
   border-radius: 6px;
 }
@@ -272,12 +260,6 @@ video
   font-weight: 500;
 }
 
-.form-group input {
-  padding: 12px;
-  font-size: 18px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
 .book-btn{
   position:absolute;
   bottom:15px;
@@ -323,7 +305,7 @@ footer {
   margin-top:15px;
   padding: 10px 20px;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 15px;
   border: 1px solid #d0e3ff;
 }
 .container-footer-left {
@@ -334,9 +316,9 @@ footer {
 .container-footer-right{
   display:flex;
   gap:100px;
-  align-items: centerP;
+  align-items: center;
 }
-/* HEADER RESORT */
+
 .resort-header {
   margin-bottom: 15px;
 }
@@ -346,19 +328,16 @@ footer {
   color: #101732;
 }
 
-/* meta */
 .resort-meta {
   margin-top: 8px;
 }
 
-/* sao */
 .stars {
   color: #f5a623;
   font-size: 30px;
   margin-bottom: 5px;
 }
 
-/* badge */
 .badges {
   margin-bottom: 5px;
 }
@@ -373,7 +352,6 @@ footer {
   margin-right: 6px;
 }
 
-/* vị trí */
 .location {
   font-size: 19px;
   color: #555;
@@ -388,20 +366,16 @@ footer {
 .location a:hover {
   text-decoration: underline;
 }
-/* tổng layout */
 .booking-section {
   display: flex;
   gap: 20px;
   margin-top: 30px;
 }
-
-/* trái */
 .booking-left {
   flex: 70%;
 }
 
 
-/* combo */
 .combo-box {
   background: #ffedd0;
   padding: 20px;
@@ -416,12 +390,10 @@ footer {
   padding-left: 20px;
 }
 
-/* phải */
 .booking-right {
   flex: 30%;
 }
 
-/* box giá */
 .price-box {
   background: white;
   padding: 20px;
@@ -445,7 +417,6 @@ footer {
   font-weight: bold;
 }
 
-/* button */
 .btn-book {
   cursor:pointer;
   width: 100%;
